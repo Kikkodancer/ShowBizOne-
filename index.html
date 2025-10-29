@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShowBiz One | Servizi per lo Spettacolo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {background-color: #000; color: #fff; overflow-x: hidden;}
+    header {height: 100vh; background: radial-gradient(circle at center, rgba(0,0,60,0.8), #000); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;}
+    header h1 {font-size: 4rem; letter-spacing: 2px; text-transform: uppercase; background: linear-gradient(90deg, #00f, #90f); -webkit-background-clip: text; color: transparent;}
+    header p {font-size: 1.2rem; margin: 1rem 0; color: #ccc;}
+    .btn {background: linear-gradient(90deg, #00f, #90f); border: none; padding: 1rem 2rem; border-radius: 50px; color: #fff; font-weight: 600; cursor: pointer; transition: 0.3s; text-decoration: none;}
+    .btn:hover {opacity: 0.8;}
+    section {padding: 80px 20px; max-width: 1200px; margin: auto; text-align: center;}
+    h2 {font-size: 2.2rem; margin-bottom: 1rem; background: linear-gradient(90deg, #00f, #90f); -webkit-background-clip: text; color: transparent;}
+    p {color: #ccc; line-height: 1.6;}
+    .services {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;}
+    .service {background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; transition: 0.3s;}
+    .service:hover {background: rgba(255,255,255,0.1); transform: translateY(-5px);}
+    .service img {width: 60px; margin-bottom: 15px; filter: brightness(0) invert(1);}
+    .gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; margin-top: 40px;}
+    .gallery img, .gallery video {width: 100%; border-radius: 15px; object-fit: cover;}
+    footer {background: #050505; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);}
+    footer a {color: #90f; text-decoration: none;}
+    footer p {color: #999; margin-top: 10px;}
+    @media (max-width: 600px) {
+      header h1 {font-size: 2.4rem;}
+      .service img {width: 48px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ShowBiz One</h1>
+    <p>Service Audio · Luci · Video · Effetti Speciali · Dinner & Circus Show</p>
+    <a href="https://wa.me/393792603685" target="_blank" class="btn">Richiedi preventivo su WhatsApp</a>
+  </header>
+
+  <section id="servizi">
+    <h2>I Nostri Servizi</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Audio" />
+        <h3>Audio Professionale</h3>
+        <p>Impianti audio di alta qualità per eventi, concerti e spettacoli live.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784593.png" alt="Luci" />
+        <h3>Luci e Scenografie</h3>
+        <p>Illuminazione dinamica e scenografie luminose per creare atmosfere uniche.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149122.png" alt="Video" />
+        <h3>Video e Proiezioni</h3>
+        <p>Schermi LED e proiezioni video per eventi indoor e outdoor.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/484/484582.png" alt="Effetti Speciali" />
+        <h3>Effetti Speciali</h3>
+        <p>Fumo, CO₂, pirotecnici scenografici e special FX per rendere unico ogni evento.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Dinner Show" />
+        <h3>Dinner Show</h3>
+        <p>Allestimenti tecnici e regia per spettacoli durante cene ed eventi esclusivi.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Circus Show" />
+        <h3>Circus Show</h3>
+        <p>Performance circensi e spettacoli immersivi con luci e audio sincronizzati.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chisiamo">
+    <h2>Chi Siamo</h2>
+    <p>ShowBiz One è un team di professionisti dello spettacolo. Da anni realizziamo eventi unici, combinando tecnologia e arte scenica. Dalla progettazione tecnica all'esecuzione live, trasformiamo la tua idea in un'esperienza emozionante.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?w=800" alt="Show 1">
+      <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800" alt="Show 2">
+      <video autoplay muted loop>
+        <source src="https://cdn.coverr.co/videos/coverr-concert-crowd-1563/1080p.mp4" type="video/mp4">
+      </video>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" alt="Show 3">
+    </div>
+  </section>
+
+  <footer>
+    <h2>Contatti</h2>
+    <p>📞 <a href="https://wa.me/393792603685">+39 379 260 3685</a></p>
+    <p>📧 <a href="mailto:info@showbizone.it">info@showbizone.it</a></p>
+    <p>© 2025 ShowBiz One – Tutti i diritti riservati</p>
+  </footer>
+
+</body>
+</html>
