@@ -84,46 +84,7 @@ img{max-width:100%;display:block}
 </style>
 </head>
 <body>
-  /* --- Animazione generale di fade-in --- */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* --- Animazione "accensione" bagliore per ShowBizOne --- */
-@keyframes titleGlowOn {
-  0% {
-    text-shadow: 0 0 0 rgba(178,102,255,0);
-  }
-  100% {
-    text-shadow:
-      0 0 20px rgba(255,255,255,0.9),
-      0 0 40px rgba(178,102,255,0.7),
-      0 0 80px rgba(224,179,255,0.5);
-  }
-}
-
-/* --- Titolo principale ShowBizOne --- */
-.brand {
-  animation:
-    fadeIn 1.6s ease-out both,
-    titleGlowOn 2.2s ease-out 0.8s both; /* fade + accensione bagliore */
-}
-
-/* --- Blocchi Dinner & Circus --- */
-.show-card {
-  animation: fadeIn 1.6s ease-in-out both;
-}
-
-.show-card:nth-child(1) { animation-delay: 0.6s; }
-.show-card:nth-child(2) { animation-delay: 1s; }
-
+  
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
