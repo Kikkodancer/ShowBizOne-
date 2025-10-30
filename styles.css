@@ -1,261 +1,82 @@
-/* Stile base e reset */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #f2f2f2; /* Colore chiaro per il testo su sfondi scuri */
-    background-color: #1a1a1a; /* Sfondo generale scuro, come nello screen 2 */
-}
-.content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+:root{
+  --bg:#000;
+  --bg-soft:#0b0b0b;
+  --txt:#fff;
+  --muted:#cfcfcf;
+  --violet:#9C4DFF;
+  --violet-2:#B777FF;
+  --border:rgba(156,77,255,.25);
 }
 
-/* HEADER / SEZIONE INIZIALE */
-.hero-section {
-    padding: 60px 0 80px 0;
-    text-align: center;
-    background-color: #222; /* Sfondo più scuro per l'hero */
-    color: white;
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--violet);text-decoration:none}
+
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+.section{padding:56px 0}
+h1,h2,h3{margin:0 0 12px}
+h2{font-size:1.6rem;color:var(--violet)}
+h3{font-size:1.05rem;color:#eaeaea}
+.text{color:#c9c9c9;line-height:1.7}
+.center{text-align:center}
+
+/* HERO */
+.hero{
+  padding:88px 0 60px;
+  background: radial-gradient(70% 60% at 50% 0%, rgba(156,77,255,.22), rgba(0,0,0,0) 60%), var(--bg);
+  text-align:center;
+}
+.brand{
+  font-size:2.4rem;letter-spacing:.06em;font-weight:700;text-transform:uppercase;
+  text-shadow:0 0 14px rgba(255,255,255,.55), 0 0 32px rgba(156,77,255,.45);
+}
+.lead{max-width:760px;margin:12px auto 0}
+.sub{max-width:760px;margin:12px auto 0;font-size:.95rem;color:#bdbdbd}
+.btn{
+  display:inline-block;margin-top:22px;padding:12px 24px;border-radius:999px;
+  background:#25D366;color:#0a0a0a;font-weight:700;box-shadow:0 10px 30px rgba(37,211,102,.25);
 }
 
-/* Navbar */
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 50px;
-}
-.main-nav .logo-text { /* Stile per il logo testuale */
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #FF0054; /* Colore di accento per il logo testuale */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.main-nav ul li {
-    margin-left: 30px;
-}
-.main-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: color 0.3s;
-}
-.main-nav ul li a:hover {
-    color: #FF0054; /* Colore di accento */
-}
+/* Highlight FX */
+.highlight{background:linear-gradient(180deg,#130016 0%, #000 100%)}
+.img-card{border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45);margin:16px 0}
 
-.main-title {
-    font-size: 2.8em;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+/* Services */
+.grid-3{display:grid;gap:16px}
+.card{
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  border-radius:14px;padding:20px;text-align:center;
+  box-shadow:0 10px 28px rgba(0,0,0,.25);
 }
-.hero-description {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #ccc;
-}
+.card p{color:#cfcfcf}
 
-/* Pulsante WhatsApp (CTA) */
-.cta-whatsapp {
-    display: inline-block;
-    background-color: #25D366; /* Colore WhatsApp */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 60px;
-    transition: background-color 0.3s;
+/* Dinner & Circus (same section) */
+.pair{
+  display:grid;gap:18px;margin-top:14px;
 }
-.cta-whatsapp:hover {
-    background-color: #128C7E;
+.show-box{
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  border-radius:14px;padding:14px;text-align:left;
+  box-shadow:0 12px 36px rgba(0,0,0,.28);
 }
-.cta-whatsapp i {
-    margin-right: 10px;
-}
+.show-box img{border-radius:10px;margin-bottom:10px}
+.show-box figcaption{color:#d3d3d3;font-size:.95rem}
 
-/* SEZIONE ICONE SERVIZI */
-.services-icons {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 50px 20px 80px 20px;
-    background-color: #1a1a1a;
-    color: #f2f2f2;
-    border-bottom: 1px solid #333;
+/* Footer */
+.footer{
+  background:#070707;border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;padding:40px 0
 }
-.icon-item {
-    text-align: center;
-    width: 250px;
-}
-.icon-item i {
-    font-size: 3.5em;
-    color: #FF0054; /* Colore di accento */
-    margin-bottom: 20px;
-}
-.icon-item h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.3em;
-}
-.icon-item p {
-    margin: 0;
-    font-size: 0.95em;
-    color: #ccc;
-}
+.footer a{color:var(--violet)}
+.copy{color:#9a9a9a;font-size:.85rem;margin-top:6px}
 
-/* SEZIONE EFFETTI SPECIALI */
-.effects-section {
-    /* Immagine segnaposto dinamica da via.placeholder.com */
-    background-image: url('https://via.placeholder.com/1920x600/333333/FFFFFF?text=Effetti+Speciali'); 
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
-    position: relative;
-    margin-top: 0;
-}
-.effects-section .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.effects-section h2 {
-    font-size: 3.2em;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-.effects-section p {
-    font-size: 1.2em;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    line-height: 1.6;
-}
-.cta-button {
-    background-color: #FF0054;
-    color: white;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
-}
-.cta-button:hover {
-    background-color: #CC0044;
-}
-
-/* SEZIONE DINNER SHOW */
-.dinner-show-section {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #1a1a1a;
-    color: #f2f2f2;
-}
-.dinner-show-section h2 {
-    font-size: 2.8em;
-    margin-bottom: 15px;
-    color: #FF0054;
-    letter-spacing: 1px;
-}
-.dinner-show-section p {
-    font-size: 1.1em;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-    color: #ccc;
-}
-.dinner-image-container {
-    height: 400px;
-    /* Immagine segnaposto dinamica da via.placeholder.com */
-    background-image: url('https://via.placeholder.com/1200x400/444444/FFFFFF?text=Dinner+Show'); 
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* FOOTER */
-footer {
-    background-color: #000;
-    color: #aaa;
-    padding: 30px 0;
-    text-align: center;
-    font-size: 0.9em;
-}
-.footer-info {
-    margin-bottom: 15px;
-}
-footer a {
-    color: #FF0054;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-footer a:hover {
-    color: #fff;
-}
-.social-links a {
-    color: #aaa;
-    font-size: 1.5em;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-.social-links a:hover {
-    color: #FF0054;
-}
-
-/* Media Queries per la responsività */
-@media (max-width: 768px) {
-    .main-nav {
-        flex-direction: column;
-    }
-    .main-nav ul {
-        margin-top: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .main-nav ul li {
-        margin: 0 10px 10px 10px;
-    }
-    .main-title {
-        font-size: 2em;
-    }
-    .services-icons {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .icon-item {
-        width: 100%;
-    }
-    .effects-section h2, .dinner-show-section h2 {
-        font-size: 2.2em;
-    }
-    .dinner-image-container {
-        height: 250px;
-    }
+/* Desktop tweaks */
+@media (min-width: 900px){
+  .brand{font-size:3.2rem}
+  h2{font-size:1.9rem}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .pair{grid-template-columns:1fr 1fr} /* affianca Dinner & Circus */
 }
