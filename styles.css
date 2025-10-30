@@ -336,3 +336,64 @@ h3{font-size:1.05rem;color:#eaeaea}
     box-shadow: 0 0 25px #e0b3ff, 0 0 45px #fff;
   }
 }
+/* --- CTA SECTION --- */
+.cta-container {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.cta-text {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  animation: textGlow 3s infinite alternate;
+}
+
+.cta-text strong {
+  color: #b266ff;
+  font-weight: 700;
+  text-shadow: 0 0 15px #d6a3ff;
+}
+
+/* --- CTA BUTTON --- */
+.cta-button {
+  background: linear-gradient(90deg, #b266ff, #e0b3ff);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+  letter-spacing: 1px;
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #e0b3ff, 0 0 40px #b266ff;
+}
+
+/* Animazioni di luce */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff;
+  }
+  to {
+    box-shadow: 0 0 25px #e0b3ff, 0 0 45px #fff;
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px #b266ff, 0 0 10px #d6a3ff;
+  }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #b266ff;
+  }
+}
