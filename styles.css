@@ -513,46 +513,9 @@ h3{font-size:1.05rem;color:#eaeaea}
 .cta-button {
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
-/* --- Animazione generale di fade-in --- */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* --- ANIMAZIONI FINALI OTTIMIZZATE --- */
 
-/* --- Animazione "accensione" bagliore per ShowBizOne --- */
-@keyframes titleGlowOn {
-  0% {
-    text-shadow: 0 0 0 rgba(178,102,255,0);
-  }
-  100% {
-    text-shadow:
-      0 0 20px rgba(255,255,255,0.9),
-      0 0 40px rgba(178,102,255,0.7),
-      0 0 80px rgba(224,179,255,0.5);
-  }
-}
-
-/* --- Titolo principale ShowBizOne --- */
-.brand {
-  animation:
-    fadeIn 1.6s ease-out both,
-    titleGlowOn 2.2s ease-out 0.8s both; /* fade + accensione bagliore */
-}
-
-/* --- Blocchi Dinner & Circus --- */
-.show-card {
-  animation: fadeIn 1.6s ease-in-out both;
-}
-
-.show-card:nth-child(1) { animation-delay: 0.6s; }
-.show-card:nth-child(2) { animation-delay: 1s; }
-/* --- Animazione fade-in (entrata dolce dal basso) --- */
+/* Entrata dolce */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -564,7 +527,7 @@ h3{font-size:1.05rem;color:#eaeaea}
   }
 }
 
-/* --- Accensione bagliore ShowBizOne --- */
+/* Accensione bagliore ShowBizOne */
 @keyframes titleGlowOn {
   0% {
     text-shadow: 0 0 0 rgba(178,102,255,0);
@@ -582,13 +545,15 @@ h3{font-size:1.05rem;color:#eaeaea}
   }
 }
 
-/* --- Applicazione al titolo principale --- */
+/* --- ShowBizOne --- */
 header.hero .brand {
   opacity: 0;
-  animation: fadeIn 1.4s ease-out forwards, titleGlowOn 2s ease-in-out 0.6s forwards;
+  animation:
+    fadeIn 1.6s ease-out forwards,
+    titleGlowOn 2s ease-in-out 0.6s forwards;
 }
 
-/* --- Blocchi Dinner & Circus con fade-in --- */
+/* --- Dinner & Circus Show --- */
 .show-card {
   opacity: 0;
   transform: translateY(25px);
@@ -599,5 +564,5 @@ header.hero .brand {
   animation-delay: 0.8s;
 }
 .show-card:nth-child(2) {
-  animation-delay: 1.2s;
+  animation-delay: 1.3s;
 }
