@@ -35,25 +35,12 @@ h3{font-size:1.05rem;color:#eaeaea}
   margin: 0 auto 15px auto;
   text-align: center;
   text-shadow: 0 0 8px rgba(255,255,255,0.2);
-  animation: fadeIn 2s ease-in;
 }
 
 /* Effetto luminoso delicato */
 .hero p strong {
   color: #b266ff;
   text-shadow: 0 0 12px #b266ff;
-}
-
-/* Piccolo effetto di apparizione */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 /* --- LOGO/TITOLO PRINCIPALE SHOWBIZONE --- */
 .brand {
