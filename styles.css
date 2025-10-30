@@ -86,3 +86,6 @@ h3{font-size:1.05rem;color:#eaeaea}
   .grid-3{grid-template-columns:repeat(3,1fr)}
   .pair{grid-template-columns:1fr 1fr} /* affianca Dinner & Circus */
 }
+#shows {
+  background: linear-gradient(180deg, #120016 0%, #000 100%);
+}
