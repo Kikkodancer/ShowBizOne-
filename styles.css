@@ -223,3 +223,80 @@ h3{font-size:1.05rem;color:#eaeaea}
   0% { left: -75%; }
   100% { left: 125%; }
 }
+/* --- CIRCUS SHOW --- */
+.circus-section {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.circus-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.circus-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.45);
+}
+
+/* Testo sopra immagine */
+.circus-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 800px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Titolo luminoso (dorato e viola) */
+.circus-text h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 0 10px #ffb347, 0 0 20px #ffb347, 0 0 40px #ffcc80;
+  animation: circusGlow 3s infinite alternate;
+}
+
+/* Paragrafo */
+.circus-text p {
+  margin-top: 15px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #f5f5f5;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  animation: fadeInText 2.5s ease-in-out;
+}
+
+/* Luce mobile */
+.circus-text h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+  animation: shimmer 4s infinite;
+}
+
+/* Animazione bagliore */
+@keyframes circusGlow {
+  from {
+    text-shadow: 0 0 5px #ff9900, 0 0 15px #ff9900, 0 0 25px #ffcc80;
+  }
+  to {
+    text-shadow: 0 0 20px #ffd480, 0 0 40px #fff0b3, 0 0 60px #ffb347;
+  }
+}
