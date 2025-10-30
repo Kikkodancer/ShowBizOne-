@@ -505,3 +505,11 @@ h3{font-size:1.05rem;color:#eaeaea}
     text-shadow: 0 0 15px #fff, 0 0 25px #b266ff;
   }
 }
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px var(--violet), 0 0 20px var(--violet2); }
+  50% { box-shadow: 0 0 25px var(--violet2), 0 0 50px var(--violet); transform: scale(1.03); }
+  100% { box-shadow: 0 0 10px var(--violet), 0 0 20px var(--violet2); }
+}
+.cta-button {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
