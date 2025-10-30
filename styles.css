@@ -122,7 +122,7 @@ body {
 /* SEZIONE EFFETTI SPECIALI */
 .effects-section {
     /* Immagine segnaposto dinamica da via.placeholder.com */
-    background-image: url ( https://via.placeholder.com/1920x600/333333/FFFFFF?text=Effetti+Speciali'); 
+    background-image: url('https://via.placeholder.com/1920x600/333333/FFFFFF?text=Effetti+Speciali'); 
     background-size: cover;
     background-position: center;
     color: white;
