@@ -515,7 +515,7 @@ h3{font-size:1.05rem;color:#eaeaea}
 }
 /* --- ANIMAZIONI FINALI OTTIMIZZATE --- */
 
-/* Entrata dolce */
+/* Entrata dolce dal basso */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -545,7 +545,7 @@ h3{font-size:1.05rem;color:#eaeaea}
   }
 }
 
-/* --- ShowBizOne --- */
+/* --- SHOWBIZONE titolo principale --- */
 header.hero .brand {
   opacity: 0;
   animation:
@@ -553,7 +553,15 @@ header.hero .brand {
     titleGlowOn 2s ease-in-out 0.6s forwards;
 }
 
-/* --- Dinner & Circus Show --- */
+/* --- EFFETTI SPECIALI sezione --- */
+.fx-overlay {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.4s ease-out forwards;
+  animation-delay: 1.2s; /* parte dopo il titolo */
+}
+
+/* --- DINNER & CIRCUS SHOW --- */
 .show-card {
   opacity: 0;
   transform: translateY(25px);
@@ -561,8 +569,8 @@ header.hero .brand {
 }
 
 .show-card:nth-child(1) {
-  animation-delay: 0.8s;
+  animation-delay: 1.8s;
 }
 .show-card:nth-child(2) {
-  animation-delay: 1.3s;
+  animation-delay: 2.2s;
 }
