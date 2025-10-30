@@ -116,3 +116,110 @@ h3{font-size:1.05rem;color:#eaeaea}
   object-fit: cover;
   box-shadow: 0 0 40px rgba(156,77,255,0.3);
 }
+/* --- Sezione Effetti Speciali con testo sopra l'immagine --- */
+.fx-full {
+  position: relative;
+  margin: 0 calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.fx-full img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.45);
+}
+
+/* Overlay del testo sopra */
+.fx-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Titolo con effetto luminoso */
+.fx-overlay h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff, 0 0 40px #e0b3ff;
+  animation: glow 3s infinite alternate;
+}
+
+/* Frase descrittiva */
+.fx-overlay p {
+  margin-top: 15px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #f5f5f5;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  animation: fadeInText 2.5s ease-in-out;
+}
+
+/* Animazioni */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #a64dff, 0 0 10px #a64dff, 0 0 20px #a64dff;
+  }
+  to {
+    text-shadow: 0 0 15px #e0b3ff, 0 0 30px #e0b3ff, 0 0 60px #e0b3ff;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* --- Effetto scintillante su EFFETTI SPECIALI --- */
+.fx-overlay h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff, 0 0 40px #e0b3ff;
+  animation: glow 3s infinite alternate;
+}
+
+/* Aggiunge una "luce mobile" che attraversa il testo */
+.fx-overlay h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+  animation: shimmer 4s infinite;
+}
+
+/* Animazione bagliore */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #a64dff, 0 0 10px #a64dff, 0 0 20px #a64dff;
+  }
+  to {
+    text-shadow: 0 0 20px #d9aaff, 0 0 40px #e6ccff, 0 0 70px #ffffff;
+  }
+}
+
+/* Animazione movimento luce */
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
