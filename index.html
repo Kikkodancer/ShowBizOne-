@@ -8,7 +8,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet" />
+/* --- GALLERIA DINNER SHOW --- */
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
 
+.gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.gallery-content img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(178,102,255,0.5);
+  transition: transform 0.3s ease;
+}
+
+.gallery-content img:hover {
+  transform: scale(1.05);
+}
+
+.close-gallery {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-shadow: 0 0 10px #b266ff;
+  z-index: 10000;
+}
 <style>
 :root{
   --bg:#000; --txt:#fff; --muted:#cfcfcf;
@@ -92,6 +134,49 @@ document.getElementById('closeDinnerGallery').addEventListener('click', function
   document.getElementById('dinnerGallery').style.display = 'none';
 });
   </script>
+  /* --- GALLERIA DINNER SHOW --- */
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.gallery-content img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(178,102,255,0.5);
+  transition: transform 0.3s ease;
+}
+
+.gallery-content img:hover {
+  transform: scale(1.05);
+}
+
+.close-gallery {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-shadow: 0 0 10px #b266ff;
+  z-index: 10000;
+}
 <body>
   
 <!-- HERO -->
@@ -116,23 +201,15 @@ document.getElementById('closeDinnerGallery').addEventListener('click', function
 
 <!-- DINNER & CIRCUS SHOW (affiancati) -->
 <section class="shows" id="shows">
-  <div class="show-card">
-    <!-- Sostituisci il nome se diverso nel repo -->
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg">
-    <div class="show-overlay">
-      <h2>Dinner Show</h2>
-      <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
-    </div>
-  </div>
-<!-- GALLERIA DINNER SHOW -->
-<div class="gallery-overlay" id="dinnerGallery">
-  <div class="gallery-content">
-    <span class="close-gallery" id="closeDinnerGallery">&times;</span>
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena">
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-2.jpg" alt="Dinner Show — coreografie e spettacolo dal vivo durante la cena">
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-3.jpg" alt="Dinner Show — performer e luce scenica viola ShowBizOne">
+  <div class="show-card" id="dinnerCard">
+  <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" 
+       alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena">
+  <div class="show-overlay">
+    <h2>Dinner Show</h2>
+    <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
   </div>
 </div>
+
   <div class="show-card">
     <!-- Sostituisci il nome se diverso nel repo -->
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/gettyimages-471730013-612x612.jpg">
@@ -142,7 +219,15 @@ document.getElementById('closeDinnerGallery').addEventListener('click', function
     </div>
   </div>
 </section>
-
+<!-- GALLERIA DINNER SHOW -->
+<div class="gallery-overlay" id="dinnerGallery">
+  <span class="close-gallery" id="closeDinnerGallery">&times;</span>
+  <div class="gallery-content">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" alt="Dinner Show — spettacolo con ballerini e performer durante la cena">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-2.jpg" alt="Dinner Show — coreografie e spettacolo dal vivo durante la cena">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-3.jpg" alt="Dinner Show — performer e luce scenica viola ShowBizOne">
+  </div>
+</div>
 <!-- SERVICE AUDIO/LUCI/VIDEO -->
 <section class="section" id="service">
   <div class="wrap">
