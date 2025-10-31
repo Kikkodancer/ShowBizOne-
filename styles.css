@@ -147,7 +147,6 @@ h3{font-size:1.05rem;color:#eaeaea}
       0 0 10px #d6a3ff;
   }
 }
-}
 /* Highlight FX */
 .highlight{background:linear-gradient(180deg,#130016 0%, #000 100%)}
 .img-card{border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45);margin:16px 0}
@@ -666,22 +665,6 @@ header.hero .brand {
 }
 .show-card:nth-child(2) {
   animation-delay: 2.2s;
-}
-
-/* --- Titolo principale ShowBiz One --- */
-.brand {
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 20px rgba(255,255,255,0.7), 0 0 40px rgba(178,102,255,0.6);
-  line-height: 1.1;
-}
-
-/* Blocca ShowBiz e Entertainment insieme */
-.showbiz-wrap {
-  position: relative;
-  display: inline-block;
 }
 
 /* ENTERTAINMENT piccolo e centrato sotto solo ShowBiz */
