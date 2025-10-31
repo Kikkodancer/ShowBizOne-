@@ -56,7 +56,7 @@ h3{font-size:1.05rem;color:#eaeaea}
     0 0 80px rgba(178,102,255,0.4);
   animation: titleGlow 3s infinite alternate;
   margin-bottom: 20px;
-  
+}
 /* Glow animato per il titolo principale */
 @keyframes titleGlow {
   from {
