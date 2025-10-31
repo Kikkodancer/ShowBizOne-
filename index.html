@@ -81,6 +81,71 @@ img{max-width:100%;display:block}
 .cta-button {
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
+  /* --- Scritta "Entertainment" con effetto neon realistico --- */
+.entertainment {
+  display: inline-block;
+  position: relative;
+  font-size: 0.75rem; /* più piccola e proporzionata */
+  font-weight: 600;
+  color: #b266ff;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  margin: 4px 0 14px 0;
+  text-shadow:
+    0 0 6px #b266ff,
+    0 0 15px #d6a3ff,
+    0 0 25px rgba(255,255,255,0.7);
+  animation: neonFlicker 3s infinite;
+}
+
+/* Barra neon sotto la scritta */
+.entertainment::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 4px;
+  background: linear-gradient(90deg, transparent, #b266ff, transparent);
+  border-radius: 2px;
+  box-shadow:
+    0 0 10px #b266ff,
+    0 0 20px #e0b3ff,
+    0 0 40px rgba(255,255,255,0.8);
+  animation: neonBarFlicker 3s infinite;
+}
+
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 6px #b266ff,
+      0 0 15px #d6a3ff,
+      0 0 25px rgba(255,255,255,0.7),
+      0 0 40px #b266ff;
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+    text-shadow:
+      0 0 3px #b266ff,
+      0 0 10px #d6a3ff;
+  }
+}
+
+@keyframes neonBarFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    box-shadow:
+      0 0 10px #b266ff,
+      0 0 25px #e0b3ff,
+      0 0 40px #fff;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+    box-shadow:
+      0 0 5px #b266ff,
+      0 0 10px #d6a3ff;
+  }
+}
 </style>
 </head>
 
