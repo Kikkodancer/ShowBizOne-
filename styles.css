@@ -81,21 +81,7 @@ h3{font-size:1.05rem;color:#eaeaea}
     0 0 50px #e0b3ff;
 }
 /* Scritta "Entertainment" con effetto neon realistico */
-.entertainment {
-  display: inline-block;
-  position: relative;
-  font-size: 0.75rem;           /* piccola e proporzionata */
-  font-weight: 600;
-  color: #b266ff;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  margin: 4px 0 14px 0;
-  text-shadow:
-    0 0 6px #b266ff,
-    0 0 15px #d6a3ff,
-    0 0 25px rgba(255,255,255,0.7);
-  animation: neonFlicker 3s infinite;
-}
+
 
 /* Barra neon sotto la scritta */
 .entertainment::after {
