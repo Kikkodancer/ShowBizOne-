@@ -691,7 +691,7 @@ header.hero .brand {
 .close-gallery:hover {
   transform: scale(1.2);
 }
-/* --- Struttura titolo principale --- */
+/* --- Titolo principale ShowBiz One --- */
 .brand {
   font-size: 3.2rem;
   font-weight: 800;
@@ -699,42 +699,36 @@ header.hero .brand {
   text-align: center;
   text-shadow: 0 0 20px rgba(255,255,255,0.7), 0 0 40px rgba(178,102,255,0.6);
   line-height: 1.1;
+}
+
+/* Blocca ShowBiz e Entertainment insieme */
+.showbiz-wrap {
   position: relative;
   display: inline-block;
 }
 
-/* SHOWBIZ (bianco luminoso) */
-.showbiz {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(178,102,255,0.6);
-}
-
-/* ENTERTAINMENT (piccolo, sotto ShowBiz) */
-.entertainment {
+/* ENTERTAINMENT piccolo e centrato sotto solo ShowBiz */
+.showbiz-wrap .entertainment {
   display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(130%);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #b266ff;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
   text-shadow: 0 0 6px #b266ff, 0 0 15px #d6a3ff, 0 0 25px rgba(255,255,255,0.7);
   animation: neonFlicker 3s infinite;
 }
 
-/* ONE (viola neon) */
+/* One resta viola e luminoso */
 .one {
-  display: block;
   color: #b266ff;
   text-shadow: 0 0 20px #b266ff, 0 0 50px #e0b3ff;
-  margin-top: 65px; /* distanza controllata da ShowBiz */
 }
 
-/* Effetto luce intermittente */
+/* Effetto neon intermittente (già definito, ma lo riscrivo per sicurezza) */
 @keyframes neonFlicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     opacity: 1;
