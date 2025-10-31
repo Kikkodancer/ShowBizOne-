@@ -26,9 +26,10 @@ h3{font-size:1.05rem;color:#eaeaea}
   background: radial-gradient(70% 60% at 50% 0%, rgba(156,77,255,.22), rgba(0,0,0,0) 60%), var(--bg);
   text-align:center;
 }
+
 /* --- Testo introduttivo sopra ShowBiz One --- */
 .hero p {
-  font-size: 1.05rem;              /* 🔥 leggermente più grande */
+  font-size: 1.05rem;
   line-height: 1.6;
   color: #f0f0f0;
   max-width: 750px;
@@ -42,9 +43,10 @@ h3{font-size:1.05rem;color:#eaeaea}
   color: #b266ff;
   text-shadow: 0 0 12px #b266ff;
 }
+
 /* --- LOGO/TITOLO PRINCIPALE SHOWBIZONE --- */
 .brand {
-  font-size: 3.2rem;              /* 🔥 aumenta la dimensione */
+  font-size: 3.2rem;
   letter-spacing: 0.08em;
   font-weight: 800;
   text-transform: none;
@@ -57,7 +59,7 @@ h3{font-size:1.05rem;color:#eaeaea}
   animation: titleGlow 3s infinite alternate;
   margin-bottom: 20px;
 }
-/* Glow animato per il titolo principale */
+
 @keyframes titleGlow {
   from {
     text-shadow:
@@ -76,45 +78,9 @@ h3{font-size:1.05rem;color:#eaeaea}
 /* “One” con colore viola luminoso */
 .brand span {
   color: #b266ff;
-  text-shadow:
-    0 0 20px #b266ff,
-    0 0 50px #e0b3ff;
+  text-shadow: 0 0 20px #b266ff, 0 0 50px #e0b3ff;
 }
 
-/* 🔮 Effetto “insegna neon” leggermente tremolante */
-@keyframes neonFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow:
-      0 0 6px #b266ff,
-      0 0 15px #d6a3ff,
-      0 0 25px rgba(255,255,255,0.7),
-      0 0 40px #b266ff;
-  }
-  20%, 24%, 55% {
-    opacity: 0.6;
-    text-shadow:
-      0 0 3px #b266ff,
-      0 0 10px #d6a3ff;
-  }
-}
-
-/* ✨ Stesso effetto per la barra sotto */
-@keyframes neonBarFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    box-shadow:
-      0 0 10px #b266ff,
-      0 0 25px #e0b3ff,
-      0 0 40px #fff;
-  }
-  20%, 24%, 55% {
-    opacity: 0.4;
-    box-shadow:
-      0 0 5px #b266ff,
-      0 0 10px #d6a3ff;
-  }
-}
 /* Highlight FX */
 .highlight{background:linear-gradient(180deg,#130016 0%, #000 100%)}
 .img-card{border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45);margin:16px 0}
@@ -123,6 +89,7 @@ h3{font-size:1.05rem;color:#eaeaea}
   box-shadow: 0 0 40px rgba(156,77,255,0.3);
   margin-top: 20px;
 }
+
 /* Services */
 .grid-3{display:grid;gap:16px}
 .card{
@@ -133,11 +100,8 @@ h3{font-size:1.05rem;color:#eaeaea}
 }
 .card p{color:#cfcfcf}
 
-/* Dinner & Circus (same section) */
-.pair{
-  display:grid;gap:18px;margin-top:14px;
-}
-/* --- Dinner & Circus Show Section --- */
+/* Dinner & Circus */
+.pair{display:grid;gap:18px;margin-top:14px;}
 .shows {
   display: flex;
   justify-content: center;
@@ -146,518 +110,161 @@ h3{font-size:1.05rem;color:#eaeaea}
   padding: 50px 10px;
   flex-wrap: wrap;
 }
-
 .show-card {
   position: relative;
   flex: 1 1 320px;
   max-width: 400px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
   transition: transform 0.4s ease;
 }
-
-.show-card:hover {
-  transform: scale(1.03);
-}
-
-.show-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+.show-card:hover {transform: scale(1.03);}
+.show-card img {width:100%;height:100%;object-fit:cover;display:block;}
 .show-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px;
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  text-align: center;
-  backdrop-filter: blur(6px);
+  position:absolute;bottom:0;left:0;right:0;padding:25px;
+  background:rgba(0,0,0,0.55);color:#fff;text-align:center;
+  backdrop-filter:blur(6px);
 }
-
 .show-overlay h2 {
-  color: #d2a2ff;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(210,162,255,0.6);
+  color:#d2a2ff;font-size:1.4rem;margin-bottom:10px;
+  text-transform:uppercase;text-shadow:0 0 10px rgba(210,162,255,0.6);
 }
-
-.show-overlay p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-.show-box{
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--border);
-  border-radius:14px;padding:14px;text-align:left;
-  box-shadow:0 12px 36px rgba(0,0,0,.28);
-}
-.show-box img{border-radius:10px;margin-bottom:10px}
-.show-box figcaption{color:#d3d3d3;font-size:.95rem}
+.show-overlay p {font-size:0.95rem;line-height:1.5;}
 
 /* Footer */
-.footer{
-  background:#070707;border-top:1px solid rgba(255,255,255,.08);
-  text-align:center;padding:40px 0
-}
+.footer{background:#070707;border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:40px 0}
 .footer a{color:var(--violet)}
 .copy{color:#9a9a9a;font-size:.85rem;margin-top:6px}
 
 /* Desktop tweaks */
-@media (min-width: 900px){
+@media (min-width:900px){
   .brand{font-size:3.2rem}
   h2{font-size:1.9rem}
   .grid-3{grid-template-columns:repeat(3,1fr)}
-  .pair{grid-template-columns:1fr 1fr} /* affianca Dinner & Circus */
+  .pair{grid-template-columns:1fr 1fr}
 }
-#shows {
-  background: linear-gradient(180deg, #120016 0%, #000 100%);
-}
-/* Immagine bordo a bordo sotto "Effetti Speciali" */
-.fx-full{
-  margin: 0 calc(50% - 50vw);   /* estende il contenitore fino ai bordi dello schermo */
-}
-.fx-full img{
-  display: block;
-  width: 100vw;                 /* larghezza piena della viewport */
-  max-width: 100vw;
-  height: auto;
-  box-shadow: 0 0 40px rgba(156,77,255,.25);
-}
-/* Immagine a tutta larghezza sotto Effetti Speciali */
-.fx-full {
-  margin: 0 calc(50% - 50vw);
-}
-.fx-full img {
-  display: block;
-  width: 100vw;
-  max-width: 100vw;
-  height: auto;
-  object-fit: cover;
-  box-shadow: 0 0 40px rgba(156,77,255,0.3);
-}
-/* --- Sezione Effetti Speciali con testo sopra l'immagine --- */
-.fx-full {
-  position: relative;
-  margin: 0 calc(50% - 50vw);
-  overflow: hidden;
-}
+#shows {background: linear-gradient(180deg,#120016 0%,#000 100%);}
 
-.fx-full img {
-  width: 100vw;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  filter: brightness(0.45);
-}
-
-/* Overlay del testo sopra */
+/* --- Effetti Speciali --- */
+.fx-full{position:relative;margin:0 calc(50% - 50vw);overflow:hidden;}
+.fx-full img{width:100vw;height:auto;display:block;object-fit:cover;filter:brightness(0.45);}
 .fx-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  padding: 20px;
-  width: 90%;
-  max-width: 800px;
-  animation: fadeIn 2s ease-in-out;
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;color:#fff;padding:20px;width:90%;max-width:800px;
+  animation:fadeIn 2s ease-in-out;
 }
-
-/* Titolo con effetto luminoso */
 .fx-overlay h2 {
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #fff;
-  text-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff, 0 0 40px #e0b3ff;
-  animation: glow 3s infinite alternate;
+  font-size:2em;text-transform:uppercase;font-weight:800;color:#fff;
+  position:relative;overflow:hidden;
+  text-shadow:0 0 10px #b266ff,0 0 20px #b266ff,0 0 40px #e0b3ff;
+  animation:glow 3s infinite alternate;
 }
-
-/* Frase descrittiva */
+.fx-overlay h2::before {
+  content:"";position:absolute;top:0;left:-75%;width:50%;height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.8),transparent);
+  animation:shimmer 4s infinite;
+}
 .fx-overlay p {
-  margin-top: 15px;
-  font-size: 1em;
-  line-height: 1.5;
-  color: #f5f5f5;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  animation: fadeInText 2.5s ease-in-out;
+  margin-top:15px;font-size:1em;line-height:1.5;color:#f5f5f5;
+  text-shadow:0 0 8px rgba(255,255,255,0.7);
+  animation:fadeInText 2.5s ease-in-out;
 }
 
 /* Animazioni */
 @keyframes glow {
-  from {
-    text-shadow: 0 0 5px #a64dff, 0 0 10px #a64dff, 0 0 20px #a64dff;
-  }
-  to {
-    text-shadow: 0 0 15px #e0b3ff, 0 0 30px #e0b3ff, 0 0 60px #e0b3ff;
-  }
+  from {text-shadow:0 0 5px #a64dff,0 0 10px #a64dff,0 0 20px #a64dff;}
+  to {text-shadow:0 0 20px #d9aaff,0 0 40px #e6ccff,0 0 70px #ffffff;}
 }
+@keyframes shimmer {0%{left:-75%;}100%{left:125%;}}
+@keyframes fadeIn {0%{opacity:0;transform:translateY(25px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeInText {from{opacity:0;}to{opacity:1;}}
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translate(-50%, -60%); }
-  100% { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-@keyframes fadeInText {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-/* --- Effetto scintillante su EFFETTI SPECIALI --- */
-.fx-overlay h2 {
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  text-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff, 0 0 40px #e0b3ff;
-  animation: glow 3s infinite alternate;
-}
-
-/* Aggiunge una "luce mobile" che attraversa il testo */
-.fx-overlay h2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
-  animation: shimmer 4s infinite;
-}
-
-/* Animazione bagliore */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #a64dff, 0 0 10px #a64dff, 0 0 20px #a64dff;
-  }
-  to {
-    text-shadow: 0 0 20px #d9aaff, 0 0 40px #e6ccff, 0 0 70px #ffffff;
-  }
-}
-
-/* Animazione movimento luce */
-@keyframes shimmer {
-  0% { left: -75%; }
-  100% { left: 125%; }
-}
 /* --- CIRCUS SHOW --- */
-.circus-section {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.circus-image {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.circus-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  filter: brightness(0.45);
-}
-
-/* Testo sopra immagine */
+.circus-section {position:relative;width:100%;margin:0;overflow:hidden;}
+.circus-image img {width:100%;height:auto;display:block;object-fit:cover;filter:brightness(0.45);}
 .circus-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  width: 90%;
-  max-width: 800px;
-  animation: fadeIn 2s ease-in-out;
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;color:#fff;width:90%;max-width:800px;animation:fadeIn 2s ease-in-out;
 }
-
-/* Titolo luminoso (dorato e viola) */
 .circus-text h2 {
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #fff;
-  text-shadow: 0 0 10px #ffb347, 0 0 20px #ffb347, 0 0 40px #ffcc80;
-  animation: circusGlow 3s infinite alternate;
+  font-size:2em;text-transform:uppercase;font-weight:800;color:#fff;
+  text-shadow:0 0 10px #ffb347,0 0 20px #ffb347,0 0 40px #ffcc80;
+  animation:circusGlow 3s infinite alternate;
 }
-
-/* Paragrafo */
-.circus-text p {
-  margin-top: 15px;
-  font-size: 1em;
-  line-height: 1.5;
-  color: #f5f5f5;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  animation: fadeInText 2.5s ease-in-out;
-}
-
-/* Luce mobile */
-.circus-text h2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
-  animation: shimmer 4s infinite;
-}
-
-/* Animazione bagliore */
 @keyframes circusGlow {
-  from {
-    text-shadow: 0 0 5px #ff9900, 0 0 15px #ff9900, 0 0 25px #ffcc80;
-  }
-  to {
-    text-shadow: 0 0 20px #ffd480, 0 0 40px #fff0b3, 0 0 60px #ffb347;
-  }
+  from {text-shadow:0 0 5px #ff9900,0 0 15px #ff9900,0 0 25px #ffcc80;}
+  to {text-shadow:0 0 20px #ffd480,0 0 40px #fff0b3,0 0 60px #ffb347;}
 }
-/* --- CTA BUTTON --- */
-.cta-container {
-  text-align: center;
-  margin: 60px 0;
+.circus-text p {
+  margin-top:15px;font-size:1em;line-height:1.5;color:#f5f5f5;
+  text-shadow:0 0 8px rgba(255,255,255,0.7);
 }
 
-.cta-button {
-  background: linear-gradient(90deg, #b266ff, #e0b3ff);
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  display: inline-block;
-  letter-spacing: 1px;
-  animation: glowPulse 2.5s infinite alternate;
-}
-
-.cta-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #e0b3ff, 0 0 40px #b266ff;
-}
-
-/* Effetto bagliore pulsante */
-@keyframes glowPulse {
-  from {
-    box-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff;
-  }
-  to {
-    box-shadow: 0 0 25px #e0b3ff, 0 0 45px #fff;
-  }
-}
-/* --- CTA SECTION --- */
-.cta-container {
-  text-align: center;
-  margin: 60px 0;
-}
+/* --- CTA --- */
+.cta-container{text-align:center;margin:60px 0;}
 .cta-text {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 400;
-  margin-bottom: 25px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-  animation: textGlow 3s infinite alternate;
+  color:#fff;font-size:1.2em;font-weight:400;margin-bottom:25px;
+  text-shadow:0 0 10px rgba(255,255,255,0.4);animation:textGlow 3s infinite alternate;
 }
-
 .cta-text strong {
-  display: block;              /* va su una riga nuova */
-  font-size: 2.2em;            /* 🔥 più grande e protagonista */
-  color: #b266ff;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-top: 10px;
-  text-shadow: 0 0 20px #b266ff, 0 0 40px #d6a3ff, 0 0 60px #fff;
-  animation: bigGlow 3s infinite alternate;
+  display:block;font-size:2.2em;color:#b266ff;font-weight:800;letter-spacing:2px;
+  margin-top:10px;text-shadow:0 0 20px #b266ff,0 0 40px #d6a3ff,0 0 60px #fff;
+  animation:bigGlow 3s infinite alternate;
 }
-
-/* Bagliore principale */
 @keyframes textGlow {
-  from { text-shadow: 0 0 5px #b266ff, 0 0 10px #d6a3ff; }
-  to { text-shadow: 0 0 15px #fff, 0 0 25px #b266ff; }
+  from {text-shadow:0 0 5px #b266ff,0 0 10px #d6a3ff;}
+  to {text-shadow:0 0 15px #fff,0 0 25px #b266ff;}
 }
-
-/* Bagliore extra per la scritta grande */
 @keyframes bigGlow {
-  from { text-shadow: 0 0 10px #b266ff, 0 0 25px #d6a3ff, 0 0 40px #fff; }
-  to { text-shadow: 0 0 30px #d6a3ff, 0 0 60px #fff, 0 0 90px #b266ff; }
+  from {text-shadow:0 0 10px #b266ff,0 0 25px #d6a3ff,0 0 40px #fff;}
+  to {text-shadow:0 0 30px #d6a3ff,0 0 60px #fff,0 0 90px #b266ff;}
 }
-
-/* --- CTA BUTTON --- */
 .cta-button {
-  background: linear-gradient(90deg, #b266ff, #e0b3ff);
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  display: inline-block;
-  letter-spacing: 1px;
-  animation: glowPulse 2.5s infinite alternate;
+  background:linear-gradient(90deg,#b266ff,#e0b3ff);color:#fff;text-decoration:none;
+  padding:14px 28px;border-radius:50px;font-weight:700;font-size:1.1em;text-transform:uppercase;
+  box-shadow:0 0 15px rgba(255,255,255,0.3);transition:all 0.3s ease;
+  display:inline-block;letter-spacing:1px;animation:pulseGlow 2.5s ease-in-out infinite;
 }
-
-.cta-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #e0b3ff, 0 0 40px #b266ff;
-}
-
-/* Animazioni di luce */
-@keyframes glowPulse {
-  from {
-    box-shadow: 0 0 10px #b266ff, 0 0 20px #b266ff;
-  }
-  to {
-    box-shadow: 0 0 25px #e0b3ff, 0 0 45px #fff;
-  }
-}
-
-@keyframes textGlow {
-  from {
-    text-shadow: 0 0 5px #b266ff, 0 0 10px #d6a3ff;
-  }
-  to {
-    text-shadow: 0 0 15px #fff, 0 0 25px #b266ff;
-  }
-
-.showbiz-wrap .entertainment {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(130%);
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #b266ff;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  text-shadow:
-    0 0 6px #b266ff,
-    0 0 15px #d6a3ff,
-    0 0 25px rgba(255,255,255,0.7);
-  animation: neonFlicker 3s infinite;
-}
-
-.one {
-  color: #b266ff;
-  text-shadow: 0 0 20px #b266ff, 0 0 50px #e0b3ff;
-}
+.cta-button:hover {transform:scale(1.08);box-shadow:0 0 25px #e0b3ff,0 0 40px #b266ff;}
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 10px var(--violet), 0 0 20px var(--violet2); }
-  50% { box-shadow: 0 0 25px var(--violet2), 0 0 50px var(--violet); transform: scale(1.03); }
-  100% { box-shadow: 0 0 10px var(--violet), 0 0 20px var(--violet2); }
-}
-.cta-button {
-  animation: pulseGlow 2.5s ease-in-out infinite;
-}
-/* --- ANIMAZIONI FINALI OTTIMIZZATE --- */
-
-/* Entrata dolce dal basso */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% {box-shadow:0 0 10px var(--violet),0 0 20px var(--violet-2);}
+  50% {box-shadow:0 0 25px var(--violet-2),0 0 50px var(--violet);transform:scale(1.03);}
+  100% {box-shadow:0 0 10px var(--violet),0 0 20px var(--violet-2);}
 }
 
-/* Accensione bagliore ShowBizOne */
-@keyframes titleGlowOn {
-  0% {
-    text-shadow: 0 0 0 rgba(178,102,255,0);
-  }
-  50% {
-    text-shadow:
-      0 0 10px rgba(255,255,255,0.5),
-      0 0 20px rgba(178,102,255,0.4);
-  }
-  100% {
-    text-shadow:
-      0 0 20px rgba(255,255,255,0.9),
-      0 0 40px rgba(178,102,255,0.7),
-      0 0 80px rgba(224,179,255,0.5);
-  }
+/* --- SHOWBIZ WRAP --- */
+.showbiz-wrap {
+  position:relative;
+  display:inline-block;
 }
-/* --- SHOWBIZONE titolo principale --- */
-header.hero .brand {
-  opacity: 0;
-  animation:
-    fadeIn 1.6s ease-out forwards,
-    titleGlowOn 2s ease-in-out 0.6s forwards;
-}
-
-/* --- EFFETTI SPECIALI sezione --- */
-.fx-overlay {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeIn 1.4s ease-out forwards;
-  animation-delay: 1.2s; /* parte dopo il titolo */
-}
-
-/* --- DINNER & CIRCUS SHOW --- */
-.show-card {
-  opacity: 0;
-  transform: translateY(25px);
-  animation: fadeIn 1.2s ease-out forwards;
-}
-
-.show-card:nth-child(1) {
-  animation-delay: 1.8s;
-}
-.show-card:nth-child(2) {
-  animation-delay: 2.2s;
-}
-
-/* ENTERTAINMENT piccolo e centrato sotto solo ShowBiz */
 .showbiz-wrap .entertainment {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(130%);
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #b266ff;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  text-shadow: 0 0 6px #b266ff, 0 0 15px #d6a3ff, 0 0 25px rgba(255,255,255,0.7);
-  animation: neonFlicker 3s infinite;
+  display:block;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%) translateY(130%);
+  font-size:0.7rem;
+  font-weight:600;
+  color:#b266ff;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  text-shadow:0 0 6px #b266ff,0 0 15px #d6a3ff,0 0 25px rgba(255,255,255,0.7);
+  animation:neonFlicker 3s infinite;
 }
-
-/* One resta viola e luminoso */
-.one {
-  color: #b266ff;
-  text-shadow: 0 0 20px #b266ff, 0 0 50px #e0b3ff;
-}
-
-/* Effetto neon intermittente (già definito, ma lo riscrivo per sicurezza) */
+.one {color:#b266ff;text-shadow:0 0 20px #b266ff,0 0 50px #e0b3ff;}
 @keyframes neonFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 6px #b266ff, 0 0 15px #d6a3ff, 0 0 25px rgba(255,255,255,0.7);
-  }
-  20%, 24%, 55% {
-    opacity: 0.6;
-    text-shadow: 0 0 3px #b266ff, 0 0 10px #d6a3ff;
-  }
+  0%,19%,21%,23%,25%,54%,56%,100% {opacity:1;text-shadow:0 0 6px #b266ff,0 0 15px #d6a3ff,0 0 25px rgba(255,255,255,0.7);}
+  20%,24%,55% {opacity:0.6;text-shadow:0 0 3px #b266ff,0 0 10px #d6a3ff;}
 }
+
+/* --- Animazione entrata titolo --- */
+@keyframes titleGlowOn {
+  0% {text-shadow:0 0 0 rgba(178,102,255,0);}
+  50% {text-shadow:0 0 10px rgba(255,255,255,0.5),0 0 20px rgba(178,102,255,0.4);}
+  100% {text-shadow:0 0 20px rgba(255,255,255,0.9),0 0 40px rgba(178,102,255,0.7),0 0 80px rgba(224,179,255,0.5);}
+}
+
+header.hero .brand {
+  opacity:0;
+  animation:fadeIn 1.6s ease-out forwards, titleGlowOn 2s ease-in-out 0.6s forwards;
+  }
