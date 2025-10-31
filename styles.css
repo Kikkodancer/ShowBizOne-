@@ -80,7 +80,6 @@ h3{font-size:1.05rem;color:#eaeaea}
     0 0 20px #b266ff,
     0 0 50px #e0b3ff;
 }
-/* Scritta "Entertainment" sotto ShowBiz One */
 /* Scritta "Entertainment" sotto ShowBiz One con barra neon */
 .entertainment {
   display: inline-block;
@@ -125,20 +124,6 @@ h3{font-size:1.05rem;color:#eaeaea}
     opacity: 1;
   }
 }
-/* Effetto luminoso animato (uguale a “One”) */
-@keyframes glowText {
-  from {
-    text-shadow:
-      0 0 10px #b266ff,
-      0 0 30px #b266ff,
-      0 0 50px #e0b3ff;
-  }
-  to {
-    text-shadow:
-      0 0 25px #e0b3ff,
-      0 0 60px #fff,
-      0 0 100px #b266ff;
-  }
 }
 /* Highlight FX */
 .highlight{background:linear-gradient(180deg,#130016 0%, #000 100%)}
