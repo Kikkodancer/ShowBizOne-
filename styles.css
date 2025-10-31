@@ -691,3 +691,55 @@ header.hero .brand {
 .close-gallery:hover {
   transform: scale(1.2);
 }
+/* --- Struttura titolo --- */
+.brand {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255,255,255,0.7), 0 0 40px rgba(178,102,255,0.6);
+  line-height: 1.1;
+}
+
+/* ShowBiz bianco */
+.showbiz {
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(178,102,255,0.6);
+  position: relative;
+}
+
+/* Entertainment piccolo e allineato sotto ShowBiz */
+.entertainment {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #b266ff;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px #b266ff, 0 0 15px #d6a3ff, 0 0 25px rgba(255,255,255,0.7);
+  animation: neonFlicker 3s infinite;
+}
+
+/* One viola sotto */
+.one {
+  display: block;
+  color: #b266ff;
+  text-shadow: 0 0 20px #b266ff, 0 0 50px #e0b3ff;
+  margin-top: 65px; /* spazio extra dopo ShowBiz+Entertainment */
+}
+
+/* Neon flicker già definito ma ripetuto qui per sicurezza */
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 6px #b266ff, 0 0 15px #d6a3ff, 0 0 25px rgba(255,255,255,0.7);
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+    text-shadow: 0 0 3px #b266ff, 0 0 10px #d6a3ff;
+  }
+}
