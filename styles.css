@@ -83,19 +83,18 @@ h3{font-size:1.05rem;color:#eaeaea}
 /* Scritta "Entertainment" sotto ShowBiz One */
 .entertainment {
   display: block;
-  font-size: 0.85rem;           /* 🔹 più piccola */
+  font-size: 0.75rem;            /* 🔹 più piccola e proporzionata */
   font-weight: 600;
   color: #b266ff;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
-  margin: 4px 0 6px 0;
+  margin: 2px 0 6px 0;
   text-shadow:
-    0 0 8px #b266ff,
-    0 0 20px #d6a3ff,
-    0 0 30px rgba(255,255,255,0.6);
+    0 0 6px #b266ff,
+    0 0 15px #d6a3ff,
+    0 0 25px rgba(255,255,255,0.6);
   animation: glowText 4s infinite alternate;
 }
-
 /* Effetto luminoso animato (uguale a “One”) */
 @keyframes glowText {
   from {
