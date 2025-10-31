@@ -46,32 +46,56 @@ h3{font-size:1.05rem;color:#eaeaea}
 
 /* --- LOGO/TITOLO PRINCIPALE SHOWBIZONE --- */
 .brand {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   letter-spacing: 0.08em;
   font-weight: 800;
-  text-transform: none;
   text-align: center;
   color: #fff;
   text-shadow:
     0 0 20px rgba(255,255,255,0.7),
     0 0 40px rgba(178,102,255,0.6),
     0 0 80px rgba(178,102,255,0.4);
-  animation: titleGlow 3s infinite alternate;
+  opacity: 0;
+  animation:
+    fadeInTitle 1.4s ease-out forwards,
+    titleGlow 3s ease-in-out 1.4s infinite alternate;
   margin-bottom: 20px;
 }
 
+/* “One” viola luminoso */
+.brand span {
+  color: #b266ff;
+  text-shadow:
+    0 0 20px #b266ff,
+    0 0 50px #e0b3ff,
+    0 0 80px #fff;
+}
+
+/* --- Animazioni --- */
+@keyframes fadeInTitle {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes titleGlow {
-  from {
+  0% {
     text-shadow:
-      0 0 10px rgba(255,255,255,0.8),
-      0 0 30px rgba(178,102,255,0.5),
-      0 0 60px rgba(178,102,255,0.4);
+      0 0 10px rgba(255,255,255,0.6),
+      0 0 20px rgba(178,102,255,0.4);
   }
-  to {
+  50% {
     text-shadow:
       0 0 25px rgba(255,255,255,1),
-      0 0 60px rgba(178,102,255,0.8),
-      0 0 120px rgba(255,255,255,0.6);
+      0 0 50px rgba(178,102,255,0.7),
+      0 0 80px rgba(255,255,255,0.6);
+  }
+  100% {
+    text-shadow:
+      0 0 15px rgba(255,255,255,0.8),
+      0 0 40px rgba(178,102,255,0.5),
+      0 0 70px rgba(178,102,255,0.6);
+  }
+}
   }
 }
 
