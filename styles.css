@@ -1,4 +1,38 @@
-:root{
+/* --- Effetto accensione progressiva per parole in grassetto --- */
+.hero p strong {
+  color: #b266ff;
+  opacity: 0;
+  display: inline-block;
+  animation: strongGlowIn 1.8s ease-out forwards;
+  text-shadow:
+    0 0 12px #b266ff,
+    0 0 25px #e0b3ff,
+    0 0 40px rgba(255,255,255,0.9);
+}
+
+/* Sequenza luminosa: ogni parola <strong> si accende una dopo l'altra */
+.hero p strong:nth-of-type(1) { animation-delay: 1.6s; }
+.hero p strong:nth-of-type(2) { animation-delay: 2.0s; }
+.hero p strong:nth-of-type(3) { animation-delay: 2.4s; }
+.hero p strong:nth-of-type(4) { animation-delay: 2.8s; }
+.hero p strong:nth-of-type(5) { animation-delay: 3.2s; }
+
+@keyframes strongGlowIn {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 8px #b266ff, 0 0 16px #e0b3ff;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 15px #b266ff, 0 0 35px #e0b3ff, 0 0 60px #fff;
+  }
+}:root{
   --bg:#000;
   --bg-soft:#0b0b0b;
   --txt:#fff;
