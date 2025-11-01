@@ -146,6 +146,108 @@ img{max-width:100%;display:block}
       0 0 10px #d6a3ff;
   }
 }
+  /* --- ANIMAZIONE POTENTE PER "ShowBizOne" --- */
+.brand {
+  position: relative;
+  display: inline-block;
+  font-size: 3.8rem;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  text-transform: none;
+  color: #fff;
+  text-shadow:
+    0 0 15px rgba(255,255,255,0.6),
+    0 0 35px rgba(178,102,255,0.5),
+    0 0 65px rgba(178,102,255,0.4);
+  opacity: 0;
+  transform: scale(0.8) translateY(40px);
+  animation:
+    titleEntrance 1.2s ease-out forwards,
+    titlePulse 3s ease-in-out 1.2s infinite alternate;
+  margin-bottom: 20px;
+}
+
+/* "One" resta viola ma parte con bagliore */
+.brand span {
+  color: #b266ff;
+  text-shadow:
+    0 0 30px #b266ff,
+    0 0 60px #e0b3ff,
+    0 0 100px rgba(255,255,255,0.9);
+  animation: oneFlash 2.8s ease-in-out 1.4s infinite alternate;
+}
+
+/* Riflesso luminoso che scorre sopra il titolo */
+.brand::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.8),
+    transparent
+  );
+  animation: shineSweep 4s ease-in-out 2s infinite;
+}
+
+/* --- Keyframes --- */
+@keyframes titleEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+    text-shadow: none;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) translateY(0);
+    text-shadow:
+      0 0 20px rgba(255,255,255,0.8),
+      0 0 50px rgba(178,102,255,0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes titlePulse {
+  0% {
+    text-shadow:
+      0 0 20px rgba(255,255,255,0.8),
+      0 0 40px rgba(178,102,255,0.5),
+      0 0 60px rgba(178,102,255,0.4);
+  }
+  100% {
+    text-shadow:
+      0 0 35px rgba(255,255,255,1),
+      0 0 70px rgba(178,102,255,0.8),
+      0 0 120px rgba(224,179,255,0.7);
+  }
+}
+
+@keyframes oneFlash {
+  0% {
+    text-shadow:
+      0 0 15px #b266ff,
+      0 0 30px #e0b3ff;
+  }
+  100% {
+    text-shadow:
+      0 0 40px #b266ff,
+      0 0 90px #e0b3ff,
+      0 0 160px #fff;
+  }
+}
+
+@keyframes shineSweep {
+  0% { left: -120%; }
+  50% { left: 130%; }
+  100% { left: 130%; }
+}
 </style>
 </head>
 <!-- HERO -->
