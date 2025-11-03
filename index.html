@@ -48,7 +48,16 @@ img{max-width:100%;display:block}
 .show-overlay h2{margin:0 0 8px;font-size:1.4rem;text-transform:uppercase;color:#fff;
   text-shadow:0 0 12px var(--violet),0 0 24px var(--violet2)}
 .show-overlay p{margin:0;color:#eee;line-height:1.55}
-
+<!-- GALLERIA DINNER SHOW -->
+<div class="gallery-overlay" id="gallery">
+  <span class="close-gallery">&times;</span>
+  <div class="gallery-content">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner1.jpg" alt="Dinner Show 1">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner2.jpg" alt="Dinner Show 2">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner3.jpg" alt="Dinner Show 3">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner4.jpg" alt="Dinner Show 4">
+  </div>
+</div>
 /* SERVICE */
 #service h2{color:var(--violet);font-size:1.6rem;margin:0 0 14px}
 .grid-3{display:grid;gap:16px}
@@ -173,6 +182,58 @@ img{max-width:100%;display:block}
 .whatsapp-link:hover .whatsapp-icon {
   transform: scale(1.15);
 }
+/* --- GALLERIA DINNER SHOW --- */
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  padding: 40px 20px;
+}
+
+.gallery-overlay.active {
+  display: flex;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.gallery-content {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  width: 100%;
+  max-width: 1000px;
+}
+
+.gallery-content img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 20px rgba(178,102,255,0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery-content img:hover {
+  transform: scale(1.05);
+}
+
+.close-gallery {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 2rem;
+  color: var(--violet2);
+  cursor: pointer;
+  text-shadow: 0 0 15px var(--violet);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.98);}
+  to {opacity: 1; transform: scale(1);}
+}
 </style>
 </head>
 <!-- HERO -->
@@ -209,8 +270,8 @@ img{max-width:100%;display:block}
   <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" 
        alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena">
   <div class="show-overlay">
-    <h2>Dinner Show</h2>
-    <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
+  <h2><a href="#" class="open-gallery">Dinner Show</a></h2>
+  <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
   </div>
 </div>
 
@@ -264,5 +325,15 @@ img{max-width:100%;display:block}
     <p class="copy">© 2025 ShowBiz One — Tutti i diritti riservati</p>
   </div>
 </footer>
+  <script>
+document.querySelector('.open-gallery').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('gallery').classList.add('active');
+});
+
+document.querySelector('.close-gallery').addEventListener('click', function() {
+  document.getElementById('gallery').classList.remove('active');
+});
+  </script>
 </body>
 </html>
