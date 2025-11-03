@@ -236,20 +236,33 @@ img{max-width:100%;display:block}
     <p>📧 <a href="mailto:info@showbizone.it">info@showbizone.it</a></p>
     <p class="copy">© 2025 ShowBiz One — Tutti i diritti riservati</p>
   </div>
-</footer>
+/* --- WHATSAPP ICON --- */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--violet);
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.whatsapp-link:hover {
+  color: var(--violet2);
+  transform: scale(1.05);
+}
+
+.whatsapp-icon {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 6px rgba(178,102,255,0.6));
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+  transform: scale(1.15);
+}
 
 </body>
 </html>
-<footer class="footer">
-  <div class="wrap">
-    <h3>Contatti</h3>
-    <p>
-      <a href="https://wa.me/393792603685" target="_blank" class="whatsapp-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-        +39 379 260 3685
-      </a>
-    </p>
-    <p>📧 <a href="mailto:info@showbizone.it">info@showbizone.it</a></p>
-    <p class="copy">© 2025 ShowBiz One — Tutti i diritti riservati</p>
-  </div>
-</footer>
