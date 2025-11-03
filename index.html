@@ -234,6 +234,29 @@ img{max-width:100%;display:block}
   from {opacity: 0; transform: scale(0.98);}
   to {opacity: 1; transform: scale(1);}
 }
+  /* --- PULSANTE DINNER SHOW --- */
+.dinner-btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 22px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 30px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.25), 0 0 25px rgba(178,102,255,0.4);
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.dinner-btn:hover {
+  background: linear-gradient(90deg, var(--violet), var(--violet2));
+  color: #fff;
+  box-shadow: 0 0 18px var(--violet), 0 0 40px var(--violet2);
+  transform: scale(1.08);
+}
 </style>
 </head>
 <!-- HERO -->
@@ -270,7 +293,7 @@ img{max-width:100%;display:block}
   <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" 
        alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena">
   <div class="show-overlay">
-  <h2><a href="#" class="open-gallery">Dinner Show</a></h2>
+  <h2><a href="#" class="dinner-btn open-gallery">Dinner Show</a></h2>
   <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
   </div>
 </div>
