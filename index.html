@@ -363,6 +363,12 @@ document.querySelector('.open-gallery').addEventListener('click', function(e) {
 document.querySelector('.close-gallery').addEventListener('click', function() {
   document.getElementById('gallery').classList.remove('active');
 });
+    // Ingrandisci immagine cliccata nella galleria
+document.querySelectorAll('.gallery-content img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('active');
+  });
+});
   </script>
 </body>
 </html>
