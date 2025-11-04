@@ -217,6 +217,31 @@ img{max-width:100%;display:block}
   box-shadow: 0 0 20px rgba(178,102,255,0.3);
   transition: transform 0.3s ease;
 }
+  /* --- ZOOM CENTRATO SULL'IMMAGINE --- */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.zoom-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(178,102,255,0.6);
+  transition: transform 0.4s ease;
+  transform: scale(1.05);
+}
 .gallery-content img.active {
   transform: scale(1.3);
   z-index: 1000;
@@ -475,6 +500,25 @@ document.querySelectorAll('.gallery-content img').forEach(img => {
   img.addEventListener('click', () => {
     img.classList.toggle('zoomed');
   });
+});
+  </script>
+  <!-- OVERLAY ZOOM IMMAGINE -->
+<div class="zoom-overlay" id="zoomOverlay">
+  <img src="" alt="Zoomed Image">
+</div>
+  <script>
+const zoomOverlay = document.getElementById('zoomOverlay');
+const zoomImage = zoomOverlay.querySelector('img');
+
+document.querySelectorAll('.gallery-content img').forEach(img => {
+  img.addEventListener('click', () => {
+    zoomImage.src = img.src;
+    zoomOverlay.classList.add('active');
+  });
+});
+
+zoomOverlay.addEventListener('click', () => {
+  zoomOverlay.classList.remove('active');
 });
   </script>
 </body>
