@@ -228,6 +228,19 @@ img{max-width:100%;display:block}
   z-index: 2000;
   backdrop-filter: blur(4px);
 }
+  .zoom-content {
+  text-align: center;
+  max-width: 90%;
+}
+
+.zoom-caption {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(178,102,255,0.6);
+  letter-spacing: 1px;
+  animation: fadeIn 0.4s ease;
+}
 
 .zoom-overlay.active {
   display: flex;
@@ -504,7 +517,10 @@ document.querySelectorAll('.gallery-content img').forEach(img => {
   </script>
   <!-- OVERLAY ZOOM IMMAGINE -->
 <div class="zoom-overlay" id="zoomOverlay">
-  <img src="" alt="Zoomed Image">
+  <div class="zoom-content">
+    <img src="" alt="Zoomed Image">
+    <p class="zoom-caption"></p>
+  </div>
 </div>
   <script>
 const zoomOverlay = document.getElementById('zoomOverlay');
