@@ -297,6 +297,17 @@ img{max-width:100%;display:block}
 .instagram-link:hover .instagram-icon {
   transform: scale(1.15);
 }
+  .gallery-content img {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-content img.zoomed {
+  transform: scale(1.6); /* ingrandimento */
+  z-index: 1000;
+  box-shadow: 0 0 40px rgba(178,102,255,0.5);
+  cursor: zoom-out;
+}
 </style>
 </head>
 <!-- HERO -->
@@ -457,6 +468,13 @@ document.querySelector('.open-fx-gallery').addEventListener('click', e => {
 document.querySelector('.open-circus-gallery').addEventListener('click', e => {
   e.preventDefault();
   openGallery('circus-gallery');
+});
+  </script>
+  <script>
+document.querySelectorAll('.gallery-content img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('zoomed');
+  });
 });
   </script>
 </body>
