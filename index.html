@@ -261,6 +261,34 @@ img{max-width:100%;display:block}
   filter: drop-shadow(0 0 25px rgba(178,102,255,0.6));
   animation: fadeIn 2s ease;
   }
+  /* --- INSTAGRAM ICON --- */
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--violet);
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.instagram-link:hover {
+  color: var(--violet2);
+  transform: scale(1.05);
+}
+
+.instagram-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  filter: drop-shadow(0 0 6px rgba(178,102,255,0.6));
+  transition: transform 0.2s ease;
+}
+
+.instagram-link:hover .instagram-icon {
+  transform: scale(1.15);
+}
 </style>
 </head>
 <!-- HERO -->
@@ -352,13 +380,27 @@ img{max-width:100%;display:block}
 <footer class="footer">
   <div class="wrap">
     <h3>Contatti</h3>
+
+    <!-- WhatsApp -->
     <p>
       <a href="https://wa.me/393792603685" target="_blank" class="whatsapp-link">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
         +39 379 260 3685
       </a>
     </p>
+
+    <!-- Instagram -->
+    <p>
+      <a href="https://www.instagram.com/showbizone" target="_blank" class="instagram-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-icon">
+        @showbizone
+      </a>
+    </p>
+
+    <!-- Email -->
     <p>📧 <a href="mailto:info@showbizone.it">info@showbizone.it</a></p>
+
+    <!-- Copyright -->
     <p class="copy">© 2025 ShowBiz One — Tutti i diritti riservati</p>
   </div>
 </footer>
