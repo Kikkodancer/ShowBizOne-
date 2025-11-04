@@ -313,7 +313,7 @@ img{max-width:100%;display:block}
   <div class="fx-image">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/IMG_20251030_235605.jpg" alt="ShowBiz One - Effetti speciali con fiamme e laser">
     <div class="fx-text">
-      <h2>EFFETTI SPECIALI</h2>
+      <h2><a href="#" class="dinner-btn open-fx-gallery">Effetti Speciali</a></h2>
       <p>Diamo potenza e adrenalina ai tuoi eventi con effetti speciali professionali: CO₂, fiamme, coriandoli, pyro indoor, geyser e special FX per show ad alto impatto.</p>
     </div>
   </div>
@@ -325,7 +325,7 @@ img{max-width:100%;display:block}
   <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" 
        alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena">
   <div class="show-overlay">
-  <h2><a href="#" class="dinner-btn open-gallery">Dinner Show</a></h2>
+  <h2><a href="#" class="dinner-btn open-circus-gallery">Circus Show</a></h2>
   <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
   </div>
 </div>
@@ -348,6 +348,25 @@ img{max-width:100%;display:block}
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner2.jpg" alt="Dinner Show 2">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner3.jpg" alt="Dinner Show 3">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner4.jpg" alt="Dinner Show 4">
+  </div>
+</div>
+    <!-- GALLERIA EFFETTI SPECIALI -->
+<div class="gallery-overlay" id="fx-gallery">
+  <span class="close-gallery">&times;</span>
+  <div class="gallery-content">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/fx1.jpg" alt="Effetti Speciali 1">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/fx2.jpg" alt="Effetti Speciali 2">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/fx3.jpg" alt="Effetti Speciali 3">
+  </div>
+</div>
+
+<!-- GALLERIA CIRCUS SHOW -->
+<div class="gallery-overlay" id="circus-gallery">
+  <span class="close-gallery">&times;</span>
+  <div class="gallery-content">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/circus1.jpg" alt="Circus Show 1">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/circus2.jpg" alt="Circus Show 2">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/circus3.jpg" alt="Circus Show 3">
   </div>
 </div>
 <!-- SERVICE AUDIO/LUCI/VIDEO -->
@@ -405,19 +424,31 @@ img{max-width:100%;display:block}
   </div>
 </footer>
   <script>
-document.querySelector('.open-gallery').addEventListener('click', function(e) {
-  e.preventDefault();
-  document.getElementById('gallery').classList.add('active');
+function openGallery(id) {
+  document.getElementById(id).classList.add('active');
+}
+
+function closeAllGalleries() {
+  document.querySelectorAll('.gallery-overlay').forEach(g => g.classList.remove('active'));
+}
+
+document.querySelectorAll('.close-gallery').forEach(btn => {
+  btn.addEventListener('click', closeAllGalleries);
 });
 
-document.querySelector('.close-gallery').addEventListener('click', function() {
-  document.getElementById('gallery').classList.remove('active');
+document.querySelector('.open-gallery').addEventListener('click', e => {
+  e.preventDefault();
+  openGallery('gallery');
 });
-    // Ingrandisci immagine cliccata nella galleria
-document.querySelectorAll('.gallery-content img').forEach(img => {
-  img.addEventListener('click', () => {
-    img.classList.toggle('active');
-  });
+
+document.querySelector('.open-fx-gallery').addEventListener('click', e => {
+  e.preventDefault();
+  openGallery('fx-gallery');
+});
+
+document.querySelector('.open-circus-gallery').addEventListener('click', e => {
+  e.preventDefault();
+  openGallery('circus-gallery');
 });
   </script>
 </body>
