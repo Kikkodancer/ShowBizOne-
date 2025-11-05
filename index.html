@@ -235,9 +235,9 @@ img{max-width:100%;display:block}
 
 .zoom-caption {
   margin-top: 16px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #fff;
-  text-shadow: 0 0 10px rgba(178,102,255,0.6);
+  text-shadow: 0 0 14px rgba(178,102,255,0.8);
   letter-spacing: 1px;
   animation: fadeIn 0.4s ease;
 }
@@ -506,13 +506,6 @@ document.querySelector('.open-fx-gallery').addEventListener('click', e => {
 document.querySelector('.open-circus-gallery').addEventListener('click', e => {
   e.preventDefault();
   openGallery('circus-gallery');
-});
-  </script>
-  <script>
-document.querySelectorAll('.gallery-content img').forEach(img => {
-  img.addEventListener('click', () => {
-    img.classList.toggle('zoomed');
-  });
 });
   </script>
   <!-- OVERLAY ZOOM IMMAGINE -->
