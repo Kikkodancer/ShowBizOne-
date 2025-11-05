@@ -636,6 +636,79 @@ zoomOverlay.addEventListener('click', e => {
   inset: 0;
   background: rgba(0, 0, 0, 0.92);
   display: none;
+<!-- SCRIPTS -->
+<script>
+// --- Apertura e chiusura delle gallerie principali ---
+function openGallery(id) {
+  document.getElementById(id).classList.add('active');
+}
+
+function closeAllGalleries() {
+  document.querySelectorAll('.gallery-overlay').forEach(g => g.classList.remove('active'));
+}
+
+document.querySelectorAll('.close-gallery').forEach(btn => {
+  btn.addEventListener('click', closeAllGalleries);
+});
+
+document.querySelector('.open-gallery').addEventListener('click', e => {
+  e.preventDefault();
+  openGallery('gallery');
+});
+document.querySelector('.open-fx-gallery').addEventListener('click', e => {
+  e.preventDefault();
+  openGallery('fx-gallery');
+});
+document.querySelector('.open-circus-gallery').addEventListener('click', e => {
+  e.preventDefault();
+  openGallery('circus-gallery');
+});
+
+// --- Overlay zoom immagine ---
+const zoomOverlay = document.createElement('div');
+zoomOverlay.classList.add('zoom-overlay');
+zoomOverlay.innerHTML = `
+  <div class="zoom-content">
+    <span class="close-zoom">&times;</span>
+    <img src="" alt="">
+    <p class="zoom-caption"></p>
+  </div>
+`;
+document.body.appendChild(zoomOverlay);
+
+const zoomImg = zoomOverlay.querySelector('img');
+const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
+const closeZoom = zoomOverlay.querySelector('.close-zoom');
+
+// --- Click su immagine dentro la galleria ---
+document.querySelectorAll('.gallery-content img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', e => {
+    e.stopPropagation();
+    zoomImg.src = img.src;
+    zoomCaption.textContent = img.alt || "";
+    zoomOverlay.classList.add('active');
+  });
+});
+
+// --- Chiusura zoom cliccando fuori o con X ---
+zoomOverlay.addEventListener('click', e => {
+  if (e.target === zoomOverlay || e.target === closeZoom) {
+    zoomOverlay.classList.add('fade-out');
+    setTimeout(() => {
+      zoomOverlay.classList.remove('active', 'fade-out');
+    }, 300);
+  }
+});
+</script>
+
+<style>
+/* --- OVERLAY ZOOM --- */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
