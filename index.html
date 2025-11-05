@@ -515,7 +515,8 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
     <p class="zoom-caption"></p>
   </div>
 </div>
-  <script>
+
+<script>
 const zoomOverlay = document.getElementById('zoomOverlay');
 const zoomImage = zoomOverlay.querySelector('img');
 const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
@@ -523,7 +524,7 @@ const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
 document.querySelectorAll('.gallery-content img').forEach(img => {
   img.addEventListener('click', () => {
     zoomImage.src = img.src;
-    zoomCaption.textContent = img.alt || ""; // prende il titolo dall’attributo alt
+    zoomCaption.textContent = img.alt || ""; // usa il testo dell'alt
     zoomOverlay.classList.add('active');
   });
 });
@@ -532,6 +533,5 @@ zoomOverlay.addEventListener('click', () => {
   zoomOverlay.classList.remove('active');
 });
 </script>
-  </script>
 </body>
 </html>
