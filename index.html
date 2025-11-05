@@ -509,16 +509,10 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
   e.preventDefault();
   openGallery('circus-gallery');
 });
-  </script>
-  <!-- OVERLAY ZOOM IMMAGINE -->
-<div class="zoom-overlay" id="zoomOverlay">
-  <div class="zoom-content">
-    <img src="" alt="">
-    <p class="zoom-caption"></p>
-  </div>
-</div>
-
+    
+  <!-- SCRIPTS -->
 <script>
+// --- Apertura e chiusura delle gallerie principali ---
 function openGallery(id) {
   document.getElementById(id).classList.add('active');
 }
@@ -545,11 +539,12 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
 });
 
 
-// 🟣 ZOOM CENTRALE FUNZIONANTE
+// --- Overlay zoom immagine ---
 const zoomOverlay = document.createElement('div');
 zoomOverlay.classList.add('zoom-overlay');
 zoomOverlay.innerHTML = `
   <div class="zoom-content">
+    <span class="close-zoom">&times;</span>
     <img src="" alt="">
     <p class="zoom-caption"></p>
   </div>
@@ -558,8 +553,11 @@ document.body.appendChild(zoomOverlay);
 
 const zoomImg = zoomOverlay.querySelector('img');
 const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
+const closeZoom = zoomOverlay.querySelector('.close-zoom');
 
+// --- Click su immagine dentro la galleria ---
 document.querySelectorAll('.gallery-content img').forEach(img => {
+  img.style.cursor = 'zoom-in';
   img.addEventListener('click', e => {
     e.stopPropagation();
     zoomImg.src = img.src;
@@ -568,9 +566,88 @@ document.querySelectorAll('.gallery-content img').forEach(img => {
   });
 });
 
-zoomOverlay.addEventListener('click', () => {
-  zoomOverlay.classList.remove('active');
+// --- Chiusura zoom cliccando fuori o con X ---
+zoomOverlay.addEventListener('click', e => {
+  if (e.target === zoomOverlay || e.target === closeZoom) {
+    zoomOverlay.classList.remove('active');
+  }
 });
+</script>
+
+<style>
+/* --- OVERLAY ZOOM --- */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.zoom-overlay.active {
+  display: flex;
+}
+
+.zoom-content {
+  position: relative;
+  text-align: center;
+  max-width: 95%;
+}
+
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(178,102,255,0.7);
+  animation: zoomIn 0.4s ease;
+}
+
+.zoom-caption {
+  margin-top: 14px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 12px rgba(178,102,255,0.8);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* --- PULSANTE × NEON --- */
+.close-zoom {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  font-size: 2rem;
+  color: #e0b3ff;
+  cursor: pointer;
+  text-shadow:
+    0 0 10px #b266ff,
+    0 0 20px #e0b3ff,
+    0 0 40px #fff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-zoom:hover {
+  color: #fff;
+  transform: scale(1.15);
+  text-shadow:
+    0 0 20px #fff,
+    0 0 40px #b266ff,
+    0 0 80px #e0b3ff;
+}
+
+/* --- ANIMAZIONI --- */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
 </script>
 </body>
 </html>
