@@ -401,7 +401,7 @@ img{max-width:100%;display:block}
 <div class="gallery-overlay" id="gallery">
   <span class="close-gallery">&times;</span>
   <div class="gallery-content">
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/IMG_20250831_215257.jpg" alt="Dinner Show 1">
+    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/IMG_20250831_215257.jpg" alt="Pink Party">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner2.jpg" alt="Dinner Show 2">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner3.jpg" alt="Dinner Show 3">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner4.jpg" alt="Dinner Show 4">
@@ -525,10 +525,12 @@ document.querySelectorAll('.gallery-content img').forEach(img => {
   <script>
 const zoomOverlay = document.getElementById('zoomOverlay');
 const zoomImage = zoomOverlay.querySelector('img');
+const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
 
 document.querySelectorAll('.gallery-content img').forEach(img => {
   img.addEventListener('click', () => {
     zoomImage.src = img.src;
+    zoomCaption.textContent = img.alt || ""; // prende il titolo dall’attributo alt
     zoomOverlay.classList.add('active');
   });
 });
@@ -536,6 +538,7 @@ document.querySelectorAll('.gallery-content img').forEach(img => {
 zoomOverlay.addEventListener('click', () => {
   zoomOverlay.classList.remove('active');
 });
+</script>
   </script>
 </body>
 </html>
