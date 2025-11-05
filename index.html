@@ -513,26 +513,32 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
   <!-- OVERLAY ZOOM IMMAGINE -->
 <div class="zoom-overlay" id="zoomOverlay">
   <div class="zoom-content">
-    <img src="" alt="Zoomed Image">
+    <img src="" alt="">
     <p class="zoom-caption"></p>
   </div>
 </div>
 
 <script>
-const zoomOverlay = document.getElementById('zoomOverlay');
-const zoomImage = zoomOverlay.querySelector('img');
-const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
+document.addEventListener("DOMContentLoaded", () => {
+  const zoomOverlay = document.getElementById('zoomOverlay');
+  const zoomImage = zoomOverlay.querySelector('img');
+  const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
 
-document.querySelectorAll('.gallery-content img').forEach(img => {
-  img.addEventListener('click', () => {
-    zoomImage.src = img.src;
-    zoomCaption.textContent = img.alt || ""; // usa il testo dell'alt
-    zoomOverlay.classList.add('active');
+  // Gestione apertura immagine
+  document.querySelectorAll('.gallery-content img').forEach(img => {
+    img.addEventListener('click', () => {
+      zoomImage.src = img.src;
+      zoomCaption.textContent = img.alt || ""; // testo preso da alt
+      zoomOverlay.classList.add('active');
+    });
   });
-});
 
-zoomOverlay.addEventListener('click', () => {
-  zoomOverlay.classList.remove('active');
+  // Chiudi cliccando ovunque sullo sfondo
+  zoomOverlay.addEventListener('click', (e) => {
+    if (e.target === zoomOverlay) {
+      zoomOverlay.classList.remove('active');
+    }
+  });
 });
 </script>
 </body>
