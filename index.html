@@ -512,6 +512,8 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
     
   <!-- SCRIPTS -->
 <script>
+<!-- SCRIPTS -->
+<script>
 // --- Apertura e chiusura delle gallerie principali ---
 function openGallery(id) {
   document.getElementById(id).classList.add('active');
@@ -537,7 +539,6 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
   e.preventDefault();
   openGallery('circus-gallery');
 });
-
 
 // --- Overlay zoom immagine ---
 const zoomOverlay = document.createElement('div');
@@ -601,7 +602,7 @@ zoomOverlay.addEventListener('click', e => {
   max-width: 90%;
   max-height: 80vh;
   border-radius: 10px;
-  box-shadow: 0 0 40px rgba(178,102,255,0.7);
+  box-shadow: 0 0 40px rgba(178,102,255,0.9), 0 0 80px rgba(224,179,255,0.6);
   animation: zoomIn 0.4s ease;
 }
 
@@ -648,6 +649,7 @@ zoomOverlay.addEventListener('click', e => {
   from {transform: scale(0.8); opacity: 0;}
   to {transform: scale(1); opacity: 1;}
 }
-</script>
+</style>
+
 </body>
 </html>
