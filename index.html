@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,9 +10,6 @@
     gtag('js', new Date());
     gtag('config', 'G-3F8YZLKCKS');
   </script>
-
-  <!-- PayPal SDK -->
-  <script src="https://www.paypal.com/sdk/js?client-id=BAAEB_ygEnSQr2L_10TlwaFAPjA23QbtXcuT8T1754Rs88q7Bwd_36JFdSuEPNRVqMZVzwICCG4YHd-ZCA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 
   <meta name="google-site-verification" content="EnNnoxgE7tYm5Gmtmrv-rF7qP68eARMDYAlnbuHPml4" />
   <meta name="description" content="ShowBiz One - Creiamo spettacoli, eventi e performance uniche. La nostra missione? Far vivere emozioni.">
@@ -31,7 +29,8 @@
     --violet:#b266ff; --violet2:#e0b3ff; --card:rgba(255,255,255,.06);
     --border:rgba(178,102,255,.25);
   }
-  *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif}
   a{text-decoration:none;color:var(--violet)}
   img{max-width:100%;display:block}
 
@@ -39,41 +38,60 @@
   .section{padding:56px 0}
 
   /* HERO */
-  .hero{padding:86px 0 48px;background: radial-gradient(70% 60% at 50% 0%, rgba(178,102,255,.22), rgba(0,0,0,0) 60%), #000; text-align:center}
-  .brand{font-size:3.2rem;letter-spacing:.06em;font-weight:800;color:#fff;margin:0 0 16px;
-    text-shadow:0 0 18px rgba(255,255,255,.7),0 0 40px rgba(178,102,255,.55)}
-  .brand span{color:var(--violet);text-shadow:0 0 20px var(--violet),0 0 50px var(--violet2)}
-  .hero .lead,.hero .sub{max-width:760px;margin:0 auto 10px;line-height:1.6;color:#efefef;text-shadow:0 0 6px rgba(255,255,255,.18)}
-  .brand img {
-    max-width: 220px;
-    height: auto;
-    display: block;
-    margin: 0 auto 16px auto;
-    filter: drop-shadow(0 0 25px rgba(178,102,255,0.7));
+  .hero{
+    padding:86px 0 48px;
+    background: radial-gradient(70% 60% at 50% 0%, rgba(178,102,255,.22), rgba(0,0,0,0) 60%), #000;
+    text-align:center;
   }
-  @media (min-width:900px){
-    .brand img { max-width: 280px; }
+  .hero .lead,.hero .sub{
+    max-width:760px;
+    margin:0 auto 10px;
+    line-height:1.6;
+    color:#efefef;
+    text-shadow:0 0 6px rgba(255,255,255,.18)
+  }
+
+  .brand-logo{
+    width:260px;
+    max-width:80%;
+    display:block;
+    margin:0 auto 18px;
+    filter: drop-shadow(0 0 25px rgba(178,102,255,0.6));
+    animation: fadeIn 2s ease;
   }
 
   /* EFFETTI SPECIALI full-width con testo sopra */
   .fx-section{position:relative;margin:0}
   .fx-image{position:relative;overflow:hidden}
   .fx-image img{width:100%;height:auto;object-fit:cover;filter:brightness(.45)}
-  .fx-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:92%;max-width:900px;color:#fff}
-  .fx-text h2{font-size:1.7rem;margin:0 0 10px;text-transform:uppercase;font-weight:800;
-    text-shadow:0 0 14px var(--violet),0 0 28px var(--violet2)}
+  .fx-text{
+    position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;width:92%;max-width:900px;color:#fff
+  }
+  .fx-text h2{
+    font-size:1.7rem;margin:0 0 10px;text-transform:uppercase;font-weight:800;
+    text-shadow:0 0 14px var(--violet),0 0 28px var(--violet2)
+  }
   .fx-text p{margin:0;font-size:1rem;line-height:1.6;text-shadow:0 0 8px rgba(255,255,255,.75)}
 
   /* DINNER & CIRCUS (affiancati, responsive) */
   .shows{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;padding:42px 18px}
-  .show-card{position:relative;flex:1 1 360px;max-width:520px;border-radius:16px;overflow:hidden;
-    background:var(--card);border:1px solid var(--border);box-shadow:0 10px 28px rgba(0,0,0,.35)}
+  .show-card{
+    position:relative;flex:1 1 360px;max-width:520px;border-radius:16px;overflow:hidden;
+    background:var(--card);border:1px solid var(--border);box-shadow:0 10px 28px rgba(0,0,0,.35)
+  }
   .show-card img{width:100%;height:420px;object-fit:cover;filter:brightness(.5)}
-  .show-overlay{position:absolute;inset:auto 0 0 0;padding:20px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,.65) 40%, rgba(0,0,0,.85) 100%);text-align:center}
-  .show-overlay h2{margin:0 0 8px;font-size:1.4rem;text-transform:uppercase;color:#fff;
-    text-shadow:0 0 12px var(--violet),0 0 24px var(--violet2)}
+  .show-overlay{
+    position:absolute;inset:auto 0 0 0;padding:20px;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,.65) 40%, rgba(0,0,0,.85) 100%);
+    text-align:center
+  }
+  .show-overlay h2{
+    margin:0 0 8px;font-size:1.4rem;text-transform:uppercase;color:#fff;
+    text-shadow:0 0 12px var(--violet),0 0 24px var(--violet2)
+  }
   .show-overlay p{margin:0;color:#eee;line-height:1.55}
-  /* GALLERIA DINNER SHOW */
 
   /* SERVICE */
   #service h2{color:var(--violet);font-size:1.6rem;margin:0 0 14px}
@@ -85,295 +103,157 @@
   /* CTA */
   .cta-container{text-align:center;margin:60px 0}
   .cta-text{color:#fff;font-size:1.2rem;margin:0 0 18px}
-  .cta-text strong{display:block;font-size:2.2rem;font-weight:800;color:var(--violet);letter-spacing:2px;text-shadow:0 0 20px var(--violet),0 0 40px var(--violet2)}
-  .cta-button{display:inline-block;background:linear-gradient(90deg,var(--violet),var(--violet2));color:#fff;padding:14px 28px;border-radius:50px;font-weight:700;text-transform:uppercase;letter-spacing:1px;box-shadow:0 0 18px rgba(255,255,255,.25)}
-  .cta-button:hover{transform:scale(1.05)}
-
-  /* FOOTER */
-  .footer{background:#070707;border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:38px 0}
-  .footer a{color:var(--violet)} .copy{color:#9c9c9c;font-size:.9rem;margin-top:6px}
-
-  /* Desktop */
-  @media (min-width:900px){
-    .brand{font-size:3.6rem}
-    .fx-text h2{font-size:2rem}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
+  .cta-text strong{
+    display:block;font-size:2.2rem;font-weight:800;color:var(--violet);letter-spacing:2px;
+    text-shadow:0 0 20px var(--violet),0 0 40px var(--violet2)
   }
+  .cta-button{
+    display:inline-block;background:linear-gradient(90deg,var(--violet),var(--violet2));
+    color:#fff;padding:14px 28px;border-radius:50px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    box-shadow:0 0 18px rgba(255,255,255,.25);
+    transition: transform .2s ease;
+  }
+  .cta-button:hover{transform:scale(1.05)}
 
   @keyframes pulseGlow {
     0% { box-shadow: 0 0 10px var(--violet), 0 0 20px var(--violet2); }
     50% { box-shadow: 0 0 25px var(--violet2), 0 0 50px var(--violet); transform: scale(1.03); }
     100% { box-shadow: 0 0 10px var(--violet), 0 0 20px var(--violet2); }
   }
-  .cta-button {
-    animation: pulseGlow 2.5s ease-in-out infinite;
-  }
+  .cta-button { animation: pulseGlow 2.5s ease-in-out infinite; }
 
-  /* --- Scritta "Entertainment" con effetto neon realistico --- */
-  .entertainment {
-    display: inline-block;
-    position: relative;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #b266ff;
-    letter-spacing: 0.38em;
-    text-transform: uppercase;
-    margin: 4px 0 14px 0;
-    text-shadow:
-      0 0 6px #b266ff,
-      0 0 15px #d6a3ff,
-      0 0 25px rgba(255,255,255,0.7);
-    animation: neonFlicker 3s infinite;
-  }
+  /* FOOTER */
+  .footer{background:#070707;border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:38px 0}
+  .footer a{color:var(--violet)}
+  .copy{color:#9c9c9c;font-size:.9rem;margin-top:6px}
 
-  .entertainment::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-top: 4px;
-    background: linear-gradient(90deg, transparent, #b266ff, transparent);
-    border-radius: 2px;
-    box-shadow:
-      0 0 10px #b266ff,
-      0 0 20px #e0b3ff,
-      0 0 40px rgba(255,255,255,0.8);
-    animation: neonBarFlicker 3s infinite;
-  }
-
-  @keyframes neonFlicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      opacity: 1;
-      text-shadow:
-        0 0 6px #b266ff,
-        0 0 15px #d6a3ff,
-        0 0 25px rgba(255,255,255,0.7),
-        0 0 40px #b266ff;
-    }
-    20%, 24%, 55% {
-      opacity: 0.6;
-      text-shadow:
-        0 0 3px #b266ff,
-        0 0 10px #d6a3ff;
-    }
-  }
-
-  @keyframes neonBarFlicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      opacity: 1;
-      box-shadow:
-        0 0 10px #b266ff,
-        0 0 25px #e0b3ff,
-        0 0 40px #fff;
-    }
-    20%, 24%, 55% {
-      opacity: 0.4;
-      box-shadow:
-        0 0 5px #b266ff,
-        0 0 10px #d6a3ff;
-    }
+  /* Desktop */
+  @media (min-width:900px){
+    .fx-text h2{font-size:2rem}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
   }
 
   /* --- WHATSAPP ICON --- */
-  .whatsapp-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--violet);
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
+  .whatsapp-link{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:1.2rem;font-weight:600;color:var(--violet);
+    text-decoration:none;transition:transform .2s ease, color .2s ease;
   }
-
-  .whatsapp-link:hover {
-    color: var(--violet2);
-    transform: scale(1.05);
-  }
-
-  .whatsapp-icon {
-    width: 26px;
-    height: 26px;
-    filter: drop-shadow(0 0 6px rgba(178,102,255,0.6));
-    transition: transform 0.2s ease;
-  }
-
-  .whatsapp-link:hover .whatsapp-icon {
-    transform: scale(1.15);
-  }
-
-  /* --- GALLERIA DINNER SHOW --- */
-  .gallery-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.95);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 999;
-    padding: 40px 20px;
-  }
-
-  .gallery-overlay.active {
-    display: flex;
-    animation: fadeIn 0.4s ease forwards;
-  }
-
-  .gallery-content {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    width: 100%;
-    max-width: 1000px;
-  }
-
-  .gallery-content img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    box-shadow: 0 0 20px rgba(178,102,255,0.3);
-    transition: transform 0.3s ease;
-  }
-
-  /* --- ZOOM CENTRATO SULL'IMMAGINE --- */
-  .zoom-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    backdrop-filter: blur(4px);
-  }
-
-  .zoom-content {
-    text-align: center;
-    max-width: 90%;
-  }
-
-  .zoom-caption {
-    margin-top: 18px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 0 0 14px rgba(178,102,255,0.8);
-    letter-spacing: 0.5px;
-    animation: fadeIn 0.5s ease;
-  }
-
-  .zoom-overlay.active {
-    display: flex;
-    animation: fadeIn 0.3s ease forwards;
-  }
-
-  .zoom-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 40px rgba(178,102,255,0.6);
-    transition: transform 0.4s ease;
-    transform: scale(1.05);
-  }
-
-  .gallery-content img.active {
-    transform: scale(1.3);
-    z-index: 1000;
-    box-shadow: 0 0 40px rgba(255,255,255,0.6);
-    transition: transform 0.3s ease;
-  }
-
-  @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.98);}
-    to {opacity: 1; transform: scale(1);}
-  }
-
-  /* --- PULSANTE DINNER SHOW --- */
-  .dinner-btn {
-    display: inline-block;
-    background: rgba(255,255,255,0.1);
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 22px;
-    border: 2px solid rgba(255,255,255,0.6);
-    border-radius: 30px;
-    box-shadow: 0 0 12px rgba(255,255,255,0.25), 0 0 25px rgba(178,102,255,0.4);
-    transition: all 0.25s ease-in-out;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-
-  .dinner-btn:hover {
-    background: linear-gradient(90deg, var(--violet), var(--violet2));
-    color: #fff;
-    box-shadow: 0 0 18px var(--violet), 0 0 40px var(--violet2);
-    transform: scale(1.08);
-  }
-
-  .brand-logo {
-    width: 260px;
-    max-width: 80%;
-    display: block;
-    margin: 0 auto 18px;
-    filter: drop-shadow(0 0 25px rgba(178,102,255,0.6));
-    animation: fadeIn 2s ease;
-  }
+  .whatsapp-link:hover{color:var(--violet2);transform:scale(1.05)}
+  .whatsapp-icon{width:26px;height:26px;filter:drop-shadow(0 0 6px rgba(178,102,255,0.6));transition:transform .2s ease}
+  .whatsapp-link:hover .whatsapp-icon{transform:scale(1.15)}
 
   /* --- INSTAGRAM ICON --- */
-  .instagram-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--violet);
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
+  .instagram-link{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:1.2rem;font-weight:600;color:var(--violet);
+    text-decoration:none;transition:transform .2s ease, color .2s ease;
+  }
+  .instagram-link:hover{color:var(--violet2);transform:scale(1.05)}
+  .instagram-icon{width:26px;height:26px;border-radius:6px;filter:drop-shadow(0 0 6px rgba(178,102,255,0.6));transition:transform .2s ease}
+  .instagram-link:hover .instagram-icon{transform:scale(1.15)}
+
+  /* --- PULSANTE (stile) --- */
+  .dinner-btn{
+    display:inline-block;
+    background:rgba(255,255,255,0.1);
+    color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    padding:10px 22px;border:2px solid rgba(255,255,255,0.6);border-radius:30px;
+    box-shadow:0 0 12px rgba(255,255,255,0.25), 0 0 25px rgba(178,102,255,0.4);
+    transition:all .25s ease-in-out;
+    text-decoration:none;font-size:1.1rem;
+  }
+  .dinner-btn:hover{
+    background:linear-gradient(90deg,var(--violet),var(--violet2));
+    box-shadow:0 0 18px var(--violet), 0 0 40px var(--violet2);
+    transform:scale(1.08);
   }
 
-  .instagram-link:hover {
-    color: var(--violet2);
-    transform: scale(1.05);
+  /* --- GALLERIE OVERLAY --- */
+  .gallery-overlay{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.95);
+    display:none;
+    justify-content:center;align-items:center;flex-direction:column;
+    z-index:999;
+    padding:40px 20px;
+  }
+  .gallery-overlay.active{display:flex;animation:fadeIn .35s ease forwards}
+
+  .close-gallery{
+    position:absolute;
+    top:16px; right:18px;
+    width:44px; height:44px;
+    display:grid; place-items:center;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(0,0,0,.35);
+    color:#fff;
+    font-size:28px;
+    line-height:1;
+    cursor:pointer;
+    box-shadow:0 0 18px rgba(178,102,255,.25);
+    user-select:none;
+  }
+  .close-gallery:hover{transform:scale(1.06)}
+
+  .gallery-content{
+    display:grid;gap:18px;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    width:100%;max-width:1000px;
+  }
+  .gallery-content img{
+    width:100%;
+    border-radius:10px;
+    border:1px solid var(--border);
+    box-shadow:0 0 20px rgba(178,102,255,0.3);
+    cursor:zoom-in;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .gallery-content img:hover{transform:translateY(-2px)}
+
+  /* --- ZOOM OVERLAY --- */
+  .zoom-overlay{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.85);
+    display:none;
+    justify-content:center;align-items:center;
+    z-index:2000;
+    backdrop-filter:blur(4px);
+    padding:24px;
+  }
+  .zoom-overlay.active{display:flex;animation:fadeIn .25s ease forwards}
+  .zoom-content{text-align:center;max-width:92%}
+  .zoom-overlay img{
+    max-width:92vw;
+    max-height:82vh;
+    border-radius:10px;
+    box-shadow:0 0 40px rgba(178,102,255,0.6);
+    transform:scale(1.02);
+  }
+  .zoom-caption{
+    margin-top:14px;
+    font-size:1rem;font-weight:500;color:#fff;
+    text-shadow:0 0 14px rgba(178,102,255,0.8);
   }
 
-  .instagram-icon {
-    width: 26px;
-    height: 26px;
-    border-radius: 6px;
-    filter: drop-shadow(0 0 6px rgba(178,102,255,0.6));
-    transition: transform 0.2s ease;
-  }
-
-  .instagram-link:hover .instagram-icon {
-    transform: scale(1.15);
-  }
-
-  .gallery-content img {
-    cursor: zoom-in;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .gallery-content img.zoomed {
-    transform: scale(1.6);
-    z-index: 1000;
-    box-shadow: 0 0 40px rgba(178,102,255,0.5);
-    cursor: zoom-out;
+  @keyframes fadeIn{
+    from{opacity:0;transform:scale(0.98)}
+    to{opacity:1;transform:scale(1)}
   }
   </style>
 </head>
+
 <body>
 
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
-    <p>
-      <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/file_00000000912071fdbb7eaad535f35e54.png" 
-           alt="ShowBizOne Logo" class="brand-logo">
-    </p>
+    <img
+      src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/file_00000000912071fdbb7eaad535f35e54.png"
+      alt="ShowBizOne Logo"
+      class="brand-logo"
+    >
     <p class="lead">
       Trasformiamo <strong>eventi</strong> in esperienze indimenticabili,
       fondendo <strong>arte</strong>, <strong>tecnologia</strong> e <strong>spettacolo</strong>.
@@ -388,7 +268,10 @@
 <!-- EFFETTI SPECIALI -->
 <section class="fx-section" id="fx">
   <div class="fx-image">
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/SAVE_20251116_214200.jpg" alt="ShowBiz One - Effetti speciali con fiamme e laser">
+    <img
+      src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/SAVE_20251116_214200.jpg"
+      alt="ShowBiz One - Effetti speciali con fiamme e laser"
+    >
     <div class="fx-text">
       <h2><a href="#" class="dinner-btn open-fx-gallery">Effetti Speciali</a></h2>
       <p>Diamo potenza e adrenalina ai tuoi eventi con effetti speciali professionali: CO₂, fiamme, coriandoli, pyro indoor, geyser e special FX per show ad alto impatto.</p>
@@ -399,8 +282,10 @@
 <!-- DINNER & CIRCUS SHOW (affiancati) -->
 <section class="shows" id="shows">
   <div class="show-card" id="dinnerCard">
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg" 
-         alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena">
+    <img
+      src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner-show-spettacolo%20(1).jpg"
+      alt="Dinner Show — spettacolo con ballerini, performer e luci sceniche durante la cena"
+    >
     <div class="show-overlay">
       <h2><a href="#" class="dinner-btn open-gallery">Dinner Show</a></h2>
       <p>Spettacoli eleganti con musica dal vivo e coreografie d’effetto. Un mix di eleganza, tecnologia e arte per rendere unica ogni serata.</p>
@@ -408,7 +293,10 @@
   </div>
 
   <div class="show-card">
-    <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/gettyimages-471730013-612x612.jpg" alt="Circus Show">
+    <img
+      src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/gettyimages-471730013-612x612.jpg"
+      alt="Circus Show"
+    >
     <div class="show-overlay">
       <h2><a href="#" class="dinner-btn open-circus-gallery">Circus Show</a></h2>
       <p>Acrobazie, fuoco e illusioni visive per un intrattenimento spettacolare. ShowBizOne porta sul palco energia, eleganza e creatività senza limiti.</p>
@@ -417,8 +305,8 @@
 </section>
 
 <!-- GALLERIA DINNER SHOW -->
-<div class="gallery-overlay" id="gallery">
-  <span class="close-gallery">&times;</span>
+<div class="gallery-overlay" id="gallery" aria-hidden="true">
+  <span class="close-gallery" role="button" aria-label="Chiudi">&times;</span>
   <div class="gallery-content">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/IMG_20250831_215257.jpg" alt="Pink Party">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/dinner2.jpg" alt="Dinner Show 2">
@@ -428,8 +316,8 @@
 </div>
 
 <!-- GALLERIA EFFETTI SPECIALI -->
-<div class="gallery-overlay" id="fx-gallery">
-  <span class="close-gallery">&times;</span>
+<div class="gallery-overlay" id="fx-gallery" aria-hidden="true">
+  <span class="close-gallery" role="button" aria-label="Chiudi">&times;</span>
   <div class="gallery-content">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/file_0000000028d871f4bfd502ad723d08cf.png" alt="Fontane Fredde Sparkular">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/file_000000006dac7246a797fa56768f22ef.png" alt="Fontane Fredde, Fumo basso, Neon">
@@ -438,8 +326,8 @@
 </div>
 
 <!-- GALLERIA CIRCUS SHOW -->
-<div class="gallery-overlay" id="circus-gallery">
-  <span class="close-gallery">&times;</span>
+<div class="gallery-overlay" id="circus-gallery" aria-hidden="true">
+  <span class="close-gallery" role="button" aria-label="Chiudi">&times;</span>
   <div class="gallery-content">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/IMG-20250612-WA0023.jpg" alt="Tyron">
     <img src="https://raw.githubusercontent.com/Kikkodancer/ShowBizOne-/refs/heads/main/IMG-20250612-WA0032.jpg" alt="Stephany 1">
@@ -470,34 +358,21 @@
 <!-- CTA -->
 <div class="cta-container">
   <p class="cta-text">Prenota ora il tuo evento con <strong>ShowBizOne</strong></p>
-  <a href="https://wa.me/393792603685" target="_blank" class="cta-button">🎭 Richiedi il tuo spettacolo</a>
+  <a href="https://wa.me/393792603685" target="_blank" rel="noopener noreferrer" class="cta-button">Richiedi il tuo spettacolo</a>
 </div>
-
-<!-- PULSANTE PAYPAL -->
-<div class="wrap" style="text-align:center; margin-bottom:40px;">
-  <div id="paypal-container-3GGDBBV7CQ7QA"></div>
-</div>
-
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "3GGDBBV7CQ7QA",
-  }).render("#paypal-container-3GGDBBV7CQ7QA");
-</script>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap">
     <h3>Contatti</h3>
 
-    <!-- WhatsApp -->
     <p>
-      <a href="https://wa.me/393792603685" target="_blank" class="whatsapp-link">
+      <a href="https://wa.me/393792603685" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
         +39 379 260 3685
       </a>
     </p>
 
-    <!-- Instagram -->
     <p>
       <a href="https://www.instagram.com/showbizone.entertainment?igsh=MTlrazE0eTM0cWY2" target="_blank" rel="noopener noreferrer" class="instagram-link">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-icon">
@@ -505,45 +380,13 @@
       </a>
     </p>
 
-    <!-- Email -->
     <p>📧 <a href="mailto:info@showbizone.it">info@showbizone.it</a></p>
-
-    <!-- Copyright -->
     <p class="copy">© 2025 ShowBiz One — Tutti i diritti riservati</p>
   </div>
 </footer>
 
-<script>
-function openGallery(id) {
-  document.getElementById(id).classList.add('active');
-}
-
-function closeAllGalleries() {
-  document.querySelectorAll('.gallery-overlay').forEach(g => g.classList.remove('active'));
-}
-
-document.querySelectorAll('.close-gallery').forEach(btn => {
-  btn.addEventListener('click', closeAllGalleries);
-});
-
-document.querySelector('.open-gallery').addEventListener('click', e => {
-  e.preventDefault();
-  openGallery('gallery');
-});
-
-document.querySelector('.open-fx-gallery').addEventListener('click', e => {
-  e.preventDefault();
-  openGallery('fx-gallery');
-});
-
-document.querySelector('.open-circus-gallery').addEventListener('click', e => {
-  e.preventDefault();
-  openGallery('circus-gallery');
-});
-</script>
-
 <!-- OVERLAY ZOOM IMMAGINE -->
-<div class="zoom-overlay" id="zoomOverlay">
+<div class="zoom-overlay" id="zoomOverlay" aria-hidden="true">
   <div class="zoom-content">
     <img src="" alt="">
     <p class="zoom-caption"></p>
@@ -551,25 +394,80 @@ document.querySelector('.open-circus-gallery').addEventListener('click', e => {
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const zoomOverlay = document.getElementById('zoomOverlay');
-  const zoomImage = zoomOverlay.querySelector('img');
-  const zoomCaption = zoomOverlay.querySelector('.zoom-caption');
+(function () {
+  function qs(sel, root=document){ return root.querySelector(sel); }
+  function qsa(sel, root=document){ return Array.from(root.querySelectorAll(sel)); }
 
-  document.querySelectorAll('.gallery-content img').forEach(img => {
-    img.addEventListener('click', () => {
-      zoomImage.src = img.src;
-      zoomCaption.textContent = img.alt || "";
-      zoomOverlay.classList.add('active');
+  function openGallery(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('active');
+    el.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeAllGalleries() {
+    qsa('.gallery-overlay').forEach(g => {
+      g.classList.remove('active');
+      g.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  function closeZoom() {
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    if (!zoomOverlay) return;
+    zoomOverlay.classList.remove('active');
+    zoomOverlay.setAttribute('aria-hidden', 'true');
+  }
+
+  document.addEventListener('click', (e) => {
+    const openDinner = e.target.closest('.open-gallery');
+    const openFx = e.target.closest('.open-fx-gallery');
+    const openCircus = e.target.closest('.open-circus-gallery');
+    const closeBtn = e.target.closest('.close-gallery');
+
+    if (openDinner) { e.preventDefault(); openGallery('gallery'); return; }
+    if (openFx) { e.preventDefault(); openGallery('fx-gallery'); return; }
+    if (openCircus) { e.preventDefault(); openGallery('circus-gallery'); return; }
+
+    if (closeBtn) { closeAllGalleries(); return; }
+
+    // Click sullo sfondo della gallery per chiudere
+    const overlay = e.target.classList && e.target.classList.contains('gallery-overlay') ? e.target : null;
+    if (overlay) { closeAllGalleries(); return; }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    if (!zoomOverlay) return;
+
+    const zoomImage = qs('img', zoomOverlay);
+    const zoomCaption = qs('.zoom-caption', zoomOverlay);
+
+    qsa('.gallery-content img').forEach(img => {
+      img.addEventListener('click', () => {
+        if (!zoomImage || !zoomCaption) return;
+        zoomImage.src = img.src;
+        zoomImage.alt = img.alt || "Immagine";
+        zoomCaption.textContent = img.alt || "";
+        zoomOverlay.classList.add('active');
+        zoomOverlay.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    // Chiudi zoom cliccando sullo sfondo
+    zoomOverlay.addEventListener('click', (e) => {
+      if (e.target === zoomOverlay) closeZoom();
     });
   });
 
-  zoomOverlay.addEventListener('click', (e) => {
-    if (e.target === zoomOverlay) {
-      zoomOverlay.classList.remove('active');
+  // ESC per chiudere tutto
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllGalleries();
+      closeZoom();
     }
   });
-});
+})();
 </script>
 
 </body>
