@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,6 +8,11 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-3F8YZLKCKS');
+  </script>
+
+  <!-- PayPal SDK (Hosted Buttons) -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAAEB_ygEnSQr2L_10TlwaFAPjA23QbtXcuT8T1754Rs88q7Bwd_36JFdSuEPNRVqMZVzwICCG4YHd-ZCA&components=hosted-buttons&disable-funding=venmo&currency=EUR">
   </script>
 
   <meta name="google-site-verification" content="EnNnoxgE7tYm5Gmtmrv-rF7qP68eARMDYAlnbuHPml4" />
@@ -237,6 +241,20 @@
     text-shadow:0 0 14px rgba(178,102,255,0.8);
   }
 
+  /* --- PAYPAL WRAP --- */
+  .paypal-wrap{
+    text-align:center;
+    margin: 10px auto 50px;
+    padding: 0 18px;
+    max-width: 1100px;
+  }
+  .paypal-wrap .paypal-title{
+    margin: 0 0 14px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .5px;
+  }
+
   @keyframes fadeIn{
     from{opacity:0;transform:scale(0.98)}
     to{opacity:1;transform:scale(1)}
@@ -360,6 +378,23 @@
   <p class="cta-text">Prenota ora il tuo evento con <strong>ShowBizOne</strong></p>
   <a href="https://wa.me/393792603685" target="_blank" rel="noopener noreferrer" class="cta-button">Richiedi il tuo spettacolo</a>
 </div>
+
+<!-- PAYPAL (Hosted Button) -->
+<div class="paypal-wrap">
+  <p class="paypal-title">Pagamento rapido con PayPal</p>
+  <div id="paypal-container-MANSHBTTUVTWC"></div>
+</div>
+
+<script>
+  // Render Hosted Button (PayPal)
+  if (window.paypal && paypal.HostedButtons) {
+    paypal.HostedButtons({
+      hostedButtonId: "MANSHBTTUVTWC",
+    }).render("#paypal-container-MANSHBTTUVTWC");
+  } else {
+    console.warn("PayPal SDK non caricato o HostedButtons non disponibile.");
+  }
+</script>
 
 <!-- FOOTER -->
 <footer class="footer">
